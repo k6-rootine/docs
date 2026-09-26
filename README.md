@@ -1,4 +1,4 @@
-# Rootine
+# Rootine -- Documentation
 
 ## Folder structure
 
@@ -32,4 +32,4 @@ Then, run the command to make the documentation:
 pasdoc --output=../docs --format=html --title="Rootine - Documentation" *.pas
 ```
 
-Then open `docs/index.html` in a browser to view the documentation.
+In the end, open `docs/index.html` in a browser to view the documentation.
