@@ -19,7 +19,7 @@ mkdir ..\docs
 ```
 Then, run the command to make the documentation:
 ```bash
-pasdoc --output=..\docs --format=html --title="Rootine - Documentation" *.pas
+pasdoc --output=..\docs --format=html --language=fr.utf8 --title="Rootine - Documentation" *.pas
 ```
 
 ### Linux (terminal)
@@ -29,7 +29,7 @@ mkdir -p ../docs
 ```
 Then, run the command to make the documentation:
 ```bash
-pasdoc --output=../docs --format=html --title="Rootine - Documentation" *.pas
+pasdoc --output=../docs --format=html --language=fr.utf8 --title="Rootine - Documentation" *.pas
 ```
 
 In the end, open `docs/index.html` in a browser to view the documentation.

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <title>Rootine - Documentation: UserData</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,36 +23,36 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarNav" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body py-2">
-<h2><a href="index.html">Rootine - Documentation</a></h2><ul class="nav flex-column px-3"><li class="nav-item"><a class="nav-link px-2 py-1" href="AllUnits.html">Units</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="ClassHierarchy.html">Class Hierarchy</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllTypes.html">Types</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllVariables.html">Variables</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllConstants.html">Constants</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllFunctions.html">Functions and Procedures</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllIdentifiers.html">Identifiers</a></li></ul></div></div>
+<h2><a href="index.html">Rootine - Documentation</a></h2><ul class="nav flex-column px-3"><li class="nav-item"><a class="nav-link px-2 py-1" href="AllUnits.html">Unités</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="ClassHierarchy.html">Hiérarchie des classes</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllTypes.html">Types</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllVariables.html">Variables</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllConstants.html">Constantes</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllFunctions.html">Fonctions et procédures</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllIdentifiers.html">Identificateurs</a></li></ul></div></div>
 <main class="pasdoc-content content">
 <div class="container-fluid py-3 px-4">
-<h1 class="unit">Unit UserData</h1>
+<h1 class="unit">Unité UserData</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p>
 This unit stores and manipulates user information such as join date, identity and statistics and the forest of trees grown through completed sessions.</p>
-<span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
-<span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
 <table class="classestable wide_list">
 <tr class="listheader">
-<th class="itemname">Name</th>
+<th class="itemname">Nom</th>
 <th class="itemdesc">Description</th>
 </tr>
 <tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="UserData.TDate.html"><code>TDate</code></a></td>
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="UserData.TDate.html"><code>TDate</code></a></td>
 <td class="itemdesc">A calender date (day/month/year) Used to check the user's join date.</td>
 </tr>
 <tr class="list2">
-<td class="itemname">Record&nbsp;<a class="bold" href="UserData.TForest.html"><code>TForest</code></a></td>
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="UserData.TForest.html"><code>TForest</code></a></td>
 <td class="itemdesc">The user's forest: for each tree species, how many trees were grown and their name.</td>
 </tr>
 <tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="UserData.TUser.html"><code>TUser</code></a></td>
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="UserData.TUser.html"><code>TUser</code></a></td>
 <td class="itemdesc">the user profile with its forest and stats</td>
 </tr>
 </table>
-<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><code>function <strong><a href="UserData.html#initialiseDate-LongInt-LongInt-LongInt-">initialiseDate</a></strong>(day, month, year: LongInt): <a href="UserData.TDate.html">TDate</a>;</code></td>
@@ -130,14 +130,14 @@ This unit stores and manipulates user information such as join date, identity an
 <td class="itemcode"><code>procedure <strong><a href="UserData.html#addTree-TUser-string-">addTree</a></strong>(var user: <a href="UserData.TUser.html">TUser</a>; tree: string);</code></td>
 </tr>
 </table>
-<span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="UserData.html#MAX_SPECIES">MAX_SPECIES</a></strong> = 100;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
-<h3 class="detail">Functions and Procedures</h3>
+<h3 class="detail">Fonctions et procédures</h3>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="initialiseDate-LongInt-LongInt-LongInt-"></span><code>function <strong>initialiseDate</strong>(day, month, year: LongInt): <a href="UserData.TDate.html">TDate</a>;</code></td>
@@ -145,7 +145,7 @@ This unit stores and manipulates user information such as join date, identity an
 <tr><td colspan="1">
 <p>
 Builds a date with its tree parts. </p>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">corresponding TDate.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -153,7 +153,7 @@ Builds a date with its tree parts. </p>
 <td class="itemcode"><span id="getDay-TDate-"></span><code>function <strong>getDay</strong>(date: <a href="UserData.TDate.html">TDate</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The day of the month of the date.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -161,7 +161,7 @@ Builds a date with its tree parts. </p>
 <td class="itemcode"><span id="getMonth-TDate-"></span><code>function <strong>getMonth</strong>(date: <a href="UserData.TDate.html">TDate</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The month of the date.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -169,7 +169,7 @@ Builds a date with its tree parts. </p>
 <td class="itemcode"><span id="getYear-TDate-"></span><code>function <strong>getYear</strong>(date: <a href="UserData.TDate.html">TDate</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The year of the date.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -179,7 +179,7 @@ Builds a date with its tree parts. </p>
 <tr><td colspan="1">
 <p>
 Creates an empty forest: no species, all names '' and all counts 0. </p>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">A new empty forest.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -189,14 +189,14 @@ Creates an empty forest: no species, all names '' and all counts 0. </p>
 <tr><td colspan="1">
 <p>
 Gets the number of trees grown for one species.   </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>forest</dt>
 <dd>The forest to read.</dd>
 <dt>n</dt>
 <dd>Position of the species (1..nbSpecies).</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">The number of trees of species n, or 0 if n is out of range.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -204,7 +204,7 @@ Gets the number of trees grown for one species.   </p>
 <td class="itemcode"><span id="getNbSpecies-TForest-"></span><code>function <strong>getNbSpecies</strong>(forest: <a href="UserData.TForest.html">TForest</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The number of different species in the forest.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -214,14 +214,14 @@ Gets the number of trees grown for one species.   </p>
 <tr><td colspan="1">
 <p>
 Searches for a species by name (case-sensitive, exact match).   </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>forest</dt>
 <dd>The forest to search.</dd>
 <dt>tree</dt>
 <dd>Name of the species to look for.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">The position (1..nbSpecies) of the species, or 0 if it is not in the forest.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -231,14 +231,14 @@ Searches for a species by name (case-sensitive, exact match).   </p>
 <tr><td colspan="1">
 <p>
 Gets the name of the species at a given position.   </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>forest</dt>
 <dd>The forest to read.</dd>
 <dt>n</dt>
 <dd>Position of the species (1..nbSpecies).</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">The species name, or a single space ' ' if n is out of range.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -248,7 +248,7 @@ Gets the name of the species at a given position.   </p>
 <tr><td colspan="1">
 <p>
 Creates a new, blank user. Name, username and description are empty, all counters are 0, the forest is empty, and joinDate is set to today's system date. </p>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">A new user.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -256,7 +256,7 @@ Creates a new, blank user. Name, username and description are empty, all counter
 <td class="itemcode"><span id="getName-TUser-"></span><code>function <strong>getName</strong>(user: <a href="UserData.TUser.html">TUser</a>): string;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The display name of the user.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -266,7 +266,7 @@ Creates a new, blank user. Name, username and description are empty, all counter
 <tr><td colspan="1">
 <p>
 Sets the display name of the user.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
 <dd>The user to modify.</dd>
@@ -282,7 +282,7 @@ Sets the display name of the user.  </p>
 <tr><td colspan="1">
 <p>
 Sets the username. No uniqueness or format check is done here.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
 <dd>The user to modify.</dd>
@@ -296,7 +296,7 @@ Sets the username. No uniqueness or format check is done here.  </p>
 <td class="itemcode"><span id="getusername-TUser-"></span><code>function <strong>getusername</strong>(user: <a href="UserData.TUser.html">TUser</a>): string;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The username (login identifier) of the user.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -306,7 +306,7 @@ Sets the username. No uniqueness or format check is done here.  </p>
 <tr><td colspan="1">
 <p>
 Sets the description.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
 <dd>The user to modify.</dd>
@@ -320,7 +320,7 @@ Sets the description.  </p>
 <td class="itemcode"><span id="getUserDescription-TUser-"></span><code>function <strong>getUserDescription</strong>(user: <a href="UserData.TUser.html">TUser</a>): string;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The description (biography) of the user.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -330,7 +330,7 @@ Sets the description.  </p>
 <tr><td colspan="1">
 <p>
 Sets the number of completed sessions.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
 <dd>The user to modify.</dd>
@@ -344,7 +344,7 @@ Sets the number of completed sessions.  </p>
 <td class="itemcode"><span id="getNbSessionsDone-TUser-"></span><code>function <strong>getNbSessionsDone</strong>(user: <a href="UserData.TUser.html">TUser</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The total number of focus sessions the user has completed.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -354,7 +354,7 @@ Sets the number of completed sessions.  </p>
 <tr><td colspan="1">
 <p>
 Sets the number of completed cycles.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
 <dd>The user to modify.</dd>
@@ -368,7 +368,7 @@ Sets the number of completed cycles.  </p>
 <td class="itemcode"><span id="getNbCyclesDone-TUser-"></span><code>function <strong>getNbCyclesDone</strong>(user: <a href="UserData.TUser.html">TUser</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The total number of cycles the user has completed.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -378,7 +378,7 @@ Sets the number of completed cycles.  </p>
 <tr><td colspan="1">
 <p>
 Sets the total focus time.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
 <dd>The user to modify.</dd>
@@ -392,7 +392,7 @@ Sets the total focus time.  </p>
 <td class="itemcode"><span id="getTotalFocusTime-TUser-"></span><code>function <strong>getTotalFocusTime</strong>(user: <a href="UserData.TUser.html">TUser</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The total focus time, in the unit used for cycle durations.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -400,7 +400,7 @@ Sets the total focus time.  </p>
 <td class="itemcode"><span id="getForest-TUser-"></span><code>function <strong>getForest</strong>(user: <a href="UserData.TUser.html">TUser</a>): <a href="UserData.TForest.html">TForest</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">A copy of the user's forest. Modifying the copy does not change the user; use addTree to grow trees.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -408,7 +408,7 @@ Sets the total focus time.  </p>
 <td class="itemcode"><span id="getJoinDate-TUser-"></span><code>function <strong>getJoinDate</strong>(user: <a href="UserData.TUser.html">TUser</a>): <a href="UserData.TDate.html">TDate</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Returns</h6>
+<p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
 <p class="return">The date the account was created.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -418,7 +418,7 @@ Sets the total focus time.  </p>
 <tr><td colspan="1">
 <p>
 Adds one grown tree of the given species to the user's forest. If the species is new, it is first added at the end of the list. If the species is new and the forest already holds MAX_SPECIES species, nothing happens.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
 <dd>The user to modify.</dd>
@@ -427,7 +427,7 @@ Adds one grown tree of the given species to the user's forest. If the species is
 </dl>
 </td></tr>
 </table>
-<h3 class="detail">Constants</h3>
+<h3 class="detail">Constantes</h3>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="MAX_SPECIES"></span><code><strong>MAX_SPECIES</strong> = 100;</code></td>
@@ -437,7 +437,7 @@ Adds one grown tree of the given species to the user's forest. If the species is
 Maximum number of different tree species a forest can hold.</p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
+<hr><span class="appinfo"><em>Produit par <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
 </span>
 </div></main>
 <script src="bootstrap.bundle.min.js"></script>

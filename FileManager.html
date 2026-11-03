@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <title>Rootine - Documentation: FileManager</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,17 +23,17 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarNav" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body py-2">
-<h2><a href="index.html">Rootine - Documentation</a></h2><ul class="nav flex-column px-3"><li class="nav-item"><a class="nav-link px-2 py-1" href="AllUnits.html">Units</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="ClassHierarchy.html">Class Hierarchy</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllTypes.html">Types</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllVariables.html">Variables</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllConstants.html">Constants</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllFunctions.html">Functions and Procedures</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllIdentifiers.html">Identifiers</a></li></ul></div></div>
+<h2><a href="index.html">Rootine - Documentation</a></h2><ul class="nav flex-column px-3"><li class="nav-item"><a class="nav-link px-2 py-1" href="AllUnits.html">Unités</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="ClassHierarchy.html">Hiérarchie des classes</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllTypes.html">Types</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllVariables.html">Variables</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllConstants.html">Constantes</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllFunctions.html">Fonctions et procédures</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllIdentifiers.html">Identificateurs</a></li></ul></div></div>
 <main class="pasdoc-content content">
 <div class="container-fluid py-3 px-4">
-<h1 class="unit">Unit FileManager</h1>
+<h1 class="unit">Unité FileManager</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p>
 Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des utilisateurs et des arbres.</p>
-<span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
-<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
+<span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><code>function <strong><a href="FileManager.html#userExists-string-">userExists</a></strong>(username: string): Boolean;</code></td>
@@ -63,7 +63,7 @@ Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des util
 <td class="itemcode"><code><strong><a href="FileManager.html#TStringArray">TStringArray</a></strong> = array[1..<a href="FileManager.html#MAX_SPECIES">MAX_SPECIES</a>] of string;</code></td>
 </tr>
 </table>
-<span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="FileManager.html#MAX_SPECIES">MAX_SPECIES</a></strong> = 100;</code></td>
@@ -82,7 +82,7 @@ Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des util
 </tr>
 </table>
 <h2 class="description">Description</h2>
-<h3 class="detail">Functions and Procedures</h3>
+<h3 class="detail">Fonctions et procédures</h3>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="userExists-string-"></span><code>function <strong>userExists</strong>(username: string): Boolean;</code></td>
@@ -92,12 +92,12 @@ Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des util
 Vérifie si un utilisateur existe</p>
 <p>
  Elle cherche un fichier nommé <code>username.dat</code> dans le dossier <code>PATH_USER</code>.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>username</dt>
 <dd>Le nom d'utilisateur à vérifier.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un booléen indiquant si l'utilisateur existe.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -116,12 +116,12 @@ Enregistre un utilisateur dans un fichier. Créé/actualise <code>username.dat</
 <tr><td colspan="1">
 <p>
 (Charge un utilisateur depuis son fichier Le pseudo doit être un nom de fichier valide, sans chemin. Retourne un <code>TUser</code> vide si l'utilisateur n'existe pas.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>username</dt>
 <dd>Le nom d'utilisateur à charger.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un <code>TUser</code> actualisé.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -133,12 +133,12 @@ Enregistre un utilisateur dans un fichier. Créé/actualise <code>username.dat</
 Vérifie si une espèce d'arbre existe</p>
 <p>
  Elle cherche un fichier nommé <code>speciesName.dat</code> dans le dossier <code>PATH_TREE</code>.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>speciesName</dt>
 <dd>Le nom de l'espèce à vérifier.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un booléen indiquant si l'espèce existe.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -148,12 +148,12 @@ Vérifie si une espèce d'arbre existe</p>
 <tr><td colspan="1">
 <p>
 (Charge une espèce d'arbre depuis son fichier Le nom de l'espèce doit être un nom de fichier valide, sans chemin. Retourne un <code>TTree</code> vide si l'espèce n'existe pas.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>speciesName</dt>
 <dd>Le nom de l'espèce à charger.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un <code>TTree</code> actualisé.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -165,7 +165,7 @@ Vérifie si une espèce d'arbre existe</p>
 Récupère la liste des espèces d'arbres disponibles</p>
 <p>
  Lis le fichier <code>species.dat</code> contenant la liste des espèces d'arbres disponibles et retourne un tableau de type <code>TStringArray</code>. </p>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un <code>TStringArray</code> contenant les noms des espèces d'arbres disponibles, au maximum <code>MAX_SPECIES</code>.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -177,7 +177,7 @@ Récupère la liste des espèces d'arbres disponibles</p>
 Compte les espèces présentes dans la liste</p>
 <p>
  Compte les espèces presentes dans la liste, au maximum <code>MAX_SPECIES</code>. </p>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un entier représentant le nombre d'espèces présentes dans la liste.</p></td></tr>
 </table>
 <h3 class="detail">Types</h3>
@@ -190,7 +190,7 @@ Compte les espèces présentes dans la liste</p>
 Tableau contenant les noms des espèces d'arbres disponibles, au maximum <code>MAX_SPECIES</code>.</p>
 </td></tr>
 </table>
-<h3 class="detail">Constants</h3>
+<h3 class="detail">Constantes</h3>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="MAX_SPECIES"></span><code><strong>MAX_SPECIES</strong> = 100;</code></td>
@@ -236,7 +236,7 @@ Chemin vers le dossier contenant les fichiers de sauvegarde des arbres.</p>
 Extension des fichiers de sauvegarde.</p>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
+<hr><span class="appinfo"><em>Produit par <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
 </span>
 </div></main>
 <script src="bootstrap.bundle.min.js"></script>

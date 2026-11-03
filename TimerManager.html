@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <title>Rootine - Documentation: TimerManager</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,28 +23,28 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarNav" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body py-2">
-<h2><a href="index.html">Rootine - Documentation</a></h2><ul class="nav flex-column px-3"><li class="nav-item"><a class="nav-link px-2 py-1" href="AllUnits.html">Units</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="ClassHierarchy.html">Class Hierarchy</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllTypes.html">Types</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllVariables.html">Variables</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllConstants.html">Constants</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllFunctions.html">Functions and Procedures</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllIdentifiers.html">Identifiers</a></li></ul></div></div>
+<h2><a href="index.html">Rootine - Documentation</a></h2><ul class="nav flex-column px-3"><li class="nav-item"><a class="nav-link px-2 py-1" href="AllUnits.html">Unités</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="ClassHierarchy.html">Hiérarchie des classes</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllTypes.html">Types</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllVariables.html">Variables</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllConstants.html">Constantes</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllFunctions.html">Fonctions et procédures</a></li><li class="nav-item"><a class="nav-link px-2 py-1" href="AllIdentifiers.html">Identificateurs</a></li></ul></div></div>
 <main class="pasdoc-content content">
 <div class="container-fluid py-3 px-4">
-<h1 class="unit">Unit TimerManager</h1>
+<h1 class="unit">Unité TimerManager</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p>
 Cette unité gère tout ce qui est relatif aux minuteurs : la création, la mise en pause, la reprise et l'avancement.</p>
-<span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
-<span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
 <table class="classestable wide_list">
 <tr class="listheader">
-<th class="itemname">Name</th>
+<th class="itemname">Nom</th>
 <th class="itemdesc">Description</th>
 </tr>
 <tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="TimerManager.TTimer.html"><code>TTimer</code></a></td>
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="TimerManager.TTimer.html"><code>TTimer</code></a></td>
 <td class="itemdesc">Un minuteur contenant le temps écoulé, la durée totale et un booléen indiquant si le minuteur est en pause.</td>
 </tr>
 </table>
-<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><code>function <strong><a href="TimerManager.html#initialiseTimer-LongInt-">initialiseTimer</a></strong>(duration: LongInt): <a href="TimerManager.TTimer.html">TTimer</a>;</code></td>
@@ -75,7 +75,7 @@ Cette unité gère tout ce qui est relatif aux minuteurs : la création, la mise
 </tr>
 </table>
 <h2 class="description">Description</h2>
-<h3 class="detail">Functions and Procedures</h3>
+<h3 class="detail">Fonctions et procédures</h3>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="initialiseTimer-LongInt-"></span><code>function <strong>initialiseTimer</strong>(duration: LongInt): <a href="TimerManager.TTimer.html">TTimer</a>;</code></td>
@@ -92,12 +92,12 @@ Cette unité gère tout ce qui est relatif aux minuteurs : la création, la mise
 Créé un minuteur avec une durée donnée</p>
 <p>
  Prend en entrée la durée <code>duration</code> puis initialise un minuteur dans <code>TTimer</code>.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>duration</dt>
 <dd>La durée du minuteur.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un minuteur dans <code>TTimer</code> initialisé.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -109,12 +109,12 @@ Créé un minuteur avec une durée donnée</p>
 Retourne le temps écoulé du minuteur</p>
 <p>
  Prend en entrée un minuteur <code>timer</code> et retourne le temps écoulé depuis son initialisation.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>timer</dt>
 <dd>Le minuteur duquel on veut récupérer le temps écoulé.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Le temps écoulé du minuteur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -126,12 +126,12 @@ Retourne le temps écoulé du minuteur</p>
 Retourne la durée totale du minuteur</p>
 <p>
  Prend en entrée un minuteur <code>timer</code> et retourne sa durée totale.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>timer</dt>
 <dd>Le minuteur duquel on veut récupérer la durée totale.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">La durée totale du minuteur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -143,12 +143,12 @@ Retourne la durée totale du minuteur</p>
 Retourne le temps restant du minuteur</p>
 <p>
  Prend en entrée un minuteur <code>timer</code> et retourne le temps restant avant la fin du minuteur.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>timer</dt>
 <dd>Le minuteur duquel on veut récupérer le temps restant.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Le temps restant du minuteur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -160,12 +160,12 @@ Retourne le temps restant du minuteur</p>
 Vérifie si le minuteur est en pause</p>
 <p>
  Prend en entrée un minuteur <code>timer</code> et retourne un booléen indiquant si le minuteur est en pause.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>timer</dt>
 <dd>Le minuteur à vérifier.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un booléen indiquant si le minuteur est en pause.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -177,12 +177,12 @@ Vérifie si le minuteur est en pause</p>
 Vérifie si le minuteur est terminé</p>
 <p>
  Prend en entrée un minuteur <code>timer</code> et retourne un booléen indiquant si le minuteur est terminé.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>timer</dt>
 <dd>Le minuteur à vérifier.</dd>
 </dl>
-<h6 class="description_section">Returns</h6>
+<h6 class="description_section">Retourne</h6>
 <p class="return">Un booléen indiquant si le minuteur est terminé.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -194,7 +194,7 @@ Vérifie si le minuteur est terminé</p>
 Avance le minuteur d'un certain temps</p>
 <p>
  Prend en entrée un minuteur <code>timer</code> et un temps <code>step</code> puis avance le minuteur de ce temps. Sans effet si le minuteur est en pause ou terminé, ou si le temps d'avancement est négatif. Si le temps d'avancement dépasse le temps restant, le minuteur est mis à jour pour être terminé.  </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>timer</dt>
 <dd>Le minuteur à avancer.</dd>
@@ -212,14 +212,14 @@ Avance le minuteur d'un certain temps</p>
 Met le minuteur en pause</p>
 <p>
  Prend en entrée un minuteur <code>timer</code> et le met en pause. Sans effet si le minuteur est déjà en pause ou terminé. </p>
-<h6 class="description_section">Parameters</h6>
+<h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>timer</dt>
 <dd>Le minuteur à mettre en pause.</dd>
 </dl>
 </td></tr>
 </table>
-<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
+<hr><span class="appinfo"><em>Produit par <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
 </span>
 </div></main>
 <script src="bootstrap.bundle.min.js"></script>
