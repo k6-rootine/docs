@@ -78,7 +78,10 @@ Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des util
 <td class="itemcode"><code><strong><a href="FileManager.html#PATH_TREE">PATH_TREE</a></strong> = 'data/trees/';</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code><strong><a href="FileManager.html#FILE_EXT">FILE_EXT</a></strong> = '.dat';</code></td>
+<td class="itemcode"><code><strong><a href="FileManager.html#FILE_EXT_USER">FILE_EXT_USER</a></strong> = '.user';</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="FileManager.html#FILE_EXT_TREE">FILE_EXT_TREE</a></strong> = '.dat';</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -91,7 +94,7 @@ Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des util
 <p>
 Vérifie si un utilisateur existe</p>
 <p>
- Elle cherche un fichier nommé <code>username.dat</code> dans le dossier <code>PATH_USER</code>.  </p>
+ Elle cherche un fichier nommé <code>username.user</code> dans le dossier <code>PATH_USER</code>.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>username</dt>
@@ -106,7 +109,7 @@ Vérifie si un utilisateur existe</p>
 </tr>
 <tr><td colspan="1">
 <p>
-Enregistre un utilisateur dans un fichier. Créé/actualise <code>username.dat</code> et remplace l'ancienne sauvegarde. Le pseudo doit être un nom de fichier valide, sans chemin.</p>
+Enregistre un utilisateur dans un fichier. Créé/actualise <code>username.user</code> et remplace l'ancienne sauvegarde. Le pseudo doit être un nom de fichier valide, sans chemin.</p>
 </td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -229,11 +232,20 @@ Chemin vers le dossier contenant les fichiers de sauvegarde des arbres.</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="FILE_EXT"></span><code><strong>FILE_EXT</strong> = '.dat';</code></td>
+<td class="itemcode"><span id="FILE_EXT_USER"></span><code><strong>FILE_EXT_USER</strong> = '.user';</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Extension des fichiers de sauvegarde.</p>
+Extension des fichiers de sauvegarde des utilisateurs.</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="FILE_EXT_TREE"></span><code><strong>FILE_EXT_TREE</strong> = '.dat';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Extension des fichiers de sauvegarde des arbres.</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Produit par <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>

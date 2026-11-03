@@ -81,13 +81,6 @@ Cette unité gère tout ce qui est relatif aux minuteurs : la création, la mise
 <td class="itemcode"><span id="initialiseTimer-LongInt-"></span><code>function <strong>initialiseTimer</strong>(duration: LongInt): <a href="TimerManager.TTimer.html">TTimer</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail visibility-published wide_list">
-<tr class="list visibility-published">
-<td class="itemcode"><span id="getElapsedTime-TTimer-"></span><code>function <strong>getElapsedTime</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): LongInt;</code></td>
-</tr>
-<tr><td colspan="1">
 <p>
 Créé un minuteur avec une durée donnée</p>
 <p>
@@ -102,7 +95,7 @@ Créé un minuteur avec une durée donnée</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="getDuration-TTimer-"></span><code>function <strong>getDuration</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): LongInt;</code></td>
+<td class="itemcode"><span id="getElapsedTime-TTimer-"></span><code>function <strong>getElapsedTime</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -119,7 +112,7 @@ Retourne le temps écoulé du minuteur</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="getRemainingTime-TTimer-"></span><code>function <strong>getRemainingTime</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): LongInt;</code></td>
+<td class="itemcode"><span id="getDuration-TTimer-"></span><code>function <strong>getDuration</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -136,7 +129,7 @@ Retourne la durée totale du minuteur</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="isPaused-TTimer-"></span><code>function <strong>isPaused</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): Boolean;</code></td>
+<td class="itemcode"><span id="getRemainingTime-TTimer-"></span><code>function <strong>getRemainingTime</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -153,7 +146,7 @@ Retourne le temps restant du minuteur</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="isFinished-TTimer-"></span><code>function <strong>isFinished</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): Boolean;</code></td>
+<td class="itemcode"><span id="isPaused-TTimer-"></span><code>function <strong>isPaused</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -170,7 +163,7 @@ Vérifie si le minuteur est en pause</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="tick-TTimer-LongInt-"></span><code>procedure <strong>tick</strong>(var timer: <a href="TimerManager.TTimer.html">TTimer</a>; step: LongInt);</code></td>
+<td class="itemcode"><span id="isFinished-TTimer-"></span><code>function <strong>isFinished</strong>(timer: <a href="TimerManager.TTimer.html">TTimer</a>): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -187,7 +180,7 @@ Vérifie si le minuteur est terminé</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="pauseTimer-TTimer-"></span><code>procedure <strong>pauseTimer</strong>(var timer: <a href="TimerManager.TTimer.html">TTimer</a>);</code></td>
+<td class="itemcode"><span id="tick-TTimer-LongInt-"></span><code>procedure <strong>tick</strong>(var timer: <a href="TimerManager.TTimer.html">TTimer</a>; step: LongInt);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -205,7 +198,7 @@ Avance le minuteur d'un certain temps</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="resumeTimer-TTimer-"></span><code>procedure <strong>resumeTimer</strong>(var timer: <a href="TimerManager.TTimer.html">TTimer</a>);</code></td>
+<td class="itemcode"><span id="pauseTimer-TTimer-"></span><code>procedure <strong>pauseTimer</strong>(var timer: <a href="TimerManager.TTimer.html">TTimer</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -216,6 +209,22 @@ Met le minuteur en pause</p>
 <dl class="parameters">
 <dt>timer</dt>
 <dd>Le minuteur à mettre en pause.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="resumeTimer-TTimer-"></span><code>procedure <strong>resumeTimer</strong>(var timer: <a href="TimerManager.TTimer.html">TTimer</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Reprend le minuteur</p>
+<p>
+ Prend en entrée un minuteur <code>timer</code> et le reprend. Sans effet si le minuteur n'est pas en pause. </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>timer</dt>
+<dd>Le minuteur à reprendre.</dd>
 </dl>
 </td></tr>
 </table>

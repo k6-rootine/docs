@@ -31,7 +31,7 @@
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p>
-This unit stores and manipulates user information such as join date, identity and statistics and the forest of trees grown through completed sessions.</p>
+Cette unité stocke et manipule les informations de l'utilisateur telles que la date d'inscription, l'identité et les statistiques, ainsi que la forêt d'arbres cultivés grâce aux sessions terminées.</p>
 <span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
 <span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
 <table class="classestable wide_list">
@@ -41,15 +41,15 @@ This unit stores and manipulates user information such as join date, identity an
 </tr>
 <tr class="list">
 <td class="itemname">Enregistrement&nbsp;<a class="bold" href="UserData.TDate.html"><code>TDate</code></a></td>
-<td class="itemdesc">A calender date (day/month/year) Used to check the user's join date.</td>
+<td class="itemdesc">Une date calendaire (jour/mois/année).</td>
 </tr>
 <tr class="list2">
 <td class="itemname">Enregistrement&nbsp;<a class="bold" href="UserData.TForest.html"><code>TForest</code></a></td>
-<td class="itemdesc">The user's forest: for each tree species, how many trees were grown and their name.</td>
+<td class="itemdesc">La forêt de l'utilisateur : pour chaque espèce d'arbre, le nombre d'arbres cultivés et son nom.</td>
 </tr>
 <tr class="list">
 <td class="itemname">Enregistrement&nbsp;<a class="bold" href="UserData.TUser.html"><code>TUser</code></a></td>
-<td class="itemdesc">the user profile with its forest and stats</td>
+<td class="itemdesc">le profil de l'utilisateur avec sa forêt et ses statistiques</td>
 </tr>
 </table>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
@@ -94,7 +94,7 @@ This unit stores and manipulates user information such as join date, identity an
 <td class="itemcode"><code>procedure <strong><a href="UserData.html#setUsername-TUser-string-">setUsername</a></strong>(var user: <a href="UserData.TUser.html">TUser</a>; username: string);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>function <strong><a href="UserData.html#getusername-TUser-">getusername</a></strong>(user: <a href="UserData.TUser.html">TUser</a>): string;</code></td>
+<td class="itemcode"><code>function <strong><a href="UserData.html#getUsername-TUser-">getUsername</a></strong>(user: <a href="UserData.TUser.html">TUser</a>): string;</code></td>
 </tr>
 <tr class="list visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="UserData.html#setUserDescription-TUser-string-">setUserDescription</a></strong>(var user: <a href="UserData.TUser.html">TUser</a>; description: string);</code></td>
@@ -144,9 +144,9 @@ This unit stores and manipulates user information such as join date, identity an
 </tr>
 <tr><td colspan="1">
 <p>
-Builds a date with its tree parts. </p>
+Construit une date à partir de ses trois parties. </p>
 <h6 class="description_section">Retourne</h6>
-<p class="return">corresponding TDate.</p></td></tr>
+<p class="return">le TDate correspondant.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -154,7 +154,7 @@ Builds a date with its tree parts. </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The day of the month of the date.</p></td></tr>
+<p class="return">Le jour du mois de la date.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -162,7 +162,7 @@ Builds a date with its tree parts. </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The month of the date.</p></td></tr>
+<p class="return">Le mois de la date.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -170,7 +170,7 @@ Builds a date with its tree parts. </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The year of the date.</p></td></tr>
+<p class="return">L'année de la date.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -178,9 +178,9 @@ Builds a date with its tree parts. </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Creates an empty forest: no species, all names '' and all counts 0. </p>
+Crée une forêt vide : aucune espèce, tous les noms '' et tous les compteurs à 0. </p>
 <h6 class="description_section">Retourne</h6>
-<p class="return">A new empty forest.</p></td></tr>
+<p class="return">Une nouvelle forêt vide.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -188,16 +188,16 @@ Creates an empty forest: no species, all names '' and all counts 0. </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Gets the number of trees grown for one species.   </p>
+Donne le nombre d'arbres cultivés pour une espèce.   </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>forest</dt>
-<dd>The forest to read.</dd>
+<dd>La forêt à lire.</dd>
 <dt>n</dt>
-<dd>Position of the species (1..nbSpecies).</dd>
+<dd>Position de l'espèce (1..nbSpecies).</dd>
 </dl>
 <h6 class="description_section">Retourne</h6>
-<p class="return">The number of trees of species n, or 0 if n is out of range.</p></td></tr>
+<p class="return">Le nombre d'arbres de l'espèce n, ou 0 si n est hors limites.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -205,7 +205,7 @@ Gets the number of trees grown for one species.   </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The number of different species in the forest.</p></td></tr>
+<p class="return">Le nombre d'espèces différentes dans la forêt.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -213,16 +213,16 @@ Gets the number of trees grown for one species.   </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Searches for a species by name (case-sensitive, exact match).   </p>
+Recherche une espèce par son nom (sensible à la casse, correspondance exacte).   </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>forest</dt>
-<dd>The forest to search.</dd>
+<dd>La forêt dans laquelle chercher.</dd>
 <dt>tree</dt>
-<dd>Name of the species to look for.</dd>
+<dd>Nom de l'espèce recherchée.</dd>
 </dl>
 <h6 class="description_section">Retourne</h6>
-<p class="return">The position (1..nbSpecies) of the species, or 0 if it is not in the forest.</p></td></tr>
+<p class="return">La position (1..nbSpecies) de l'espèce, ou 0 si elle n'est pas dans la forêt.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -230,16 +230,16 @@ Searches for a species by name (case-sensitive, exact match).   </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Gets the name of the species at a given position.   </p>
+Donne le nom de l'espèce à une position donnée.   </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>forest</dt>
-<dd>The forest to read.</dd>
+<dd>La forêt à lire.</dd>
 <dt>n</dt>
-<dd>Position of the species (1..nbSpecies).</dd>
+<dd>Position de l'espèce (1..nbSpecies).</dd>
 </dl>
 <h6 class="description_section">Retourne</h6>
-<p class="return">The species name, or a single space ' ' if n is out of range.</p></td></tr>
+<p class="return">Le nom de l'espèce, ou une espace simple ' ' si n est hors limites.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -247,9 +247,9 @@ Gets the name of the species at a given position.   </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Creates a new, blank user. Name, username and description are empty, all counters are 0, the forest is empty, and joinDate is set to today's system date. </p>
+Crée un nouvel utilisateur vierge. Le nom, le nom d'utilisateur et la description sont vides, tous les compteurs valent 0, la forêt est vide, et joinDate est fixée à la date système du jour. </p>
 <h6 class="description_section">Retourne</h6>
-<p class="return">A new user.</p></td></tr>
+<p class="return">Un nouvel utilisateur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -257,7 +257,7 @@ Creates a new, blank user. Name, username and description are empty, all counter
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The display name of the user.</p></td></tr>
+<p class="return">Le nom affiché de l'utilisateur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -265,13 +265,13 @@ Creates a new, blank user. Name, username and description are empty, all counter
 </tr>
 <tr><td colspan="1">
 <p>
-Sets the display name of the user.  </p>
+Définit le nom affiché de l'utilisateur.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
-<dd>The user to modify.</dd>
+<dd>L'utilisateur à modifier.</dd>
 <dt>name</dt>
-<dd>The new name.</dd>
+<dd>Le nouveau nom.</dd>
 </dl>
 </td></tr>
 </table>
@@ -281,23 +281,23 @@ Sets the display name of the user.  </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Sets the username. No uniqueness or format check is done here.  </p>
+Définit le nom d'utilisateur. Aucune vérification d'unicité ni de format n'est faite ici.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
-<dd>The user to modify.</dd>
+<dd>L'utilisateur à modifier.</dd>
 <dt>username</dt>
-<dd>The new username.</dd>
+<dd>Le nouveau nom d'utilisateur.</dd>
 </dl>
 </td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="getusername-TUser-"></span><code>function <strong>getusername</strong>(user: <a href="UserData.TUser.html">TUser</a>): string;</code></td>
+<td class="itemcode"><span id="getUsername-TUser-"></span><code>function <strong>getUsername</strong>(user: <a href="UserData.TUser.html">TUser</a>): string;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The username (login identifier) of the user.</p></td></tr>
+<p class="return">Le nom d'utilisateur (identifiant de connexion) de l'utilisateur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -305,13 +305,13 @@ Sets the username. No uniqueness or format check is done here.  </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Sets the description.  </p>
+Définit la description.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
-<dd>The user to modify.</dd>
+<dd>L'utilisateur à modifier.</dd>
 <dt>description</dt>
-<dd>The new description.</dd>
+<dd>La nouvelle description.</dd>
 </dl>
 </td></tr>
 </table>
@@ -321,7 +321,7 @@ Sets the description.  </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The description (biography) of the user.</p></td></tr>
+<p class="return">La description (biographie) de l'utilisateur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -329,13 +329,13 @@ Sets the description.  </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Sets the number of completed sessions.  </p>
+Définit le nombre de sessions terminées.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
-<dd>The user to modify.</dd>
+<dd>L'utilisateur à modifier.</dd>
 <dt>nb</dt>
-<dd>The new total (should be &gt;= 0, not checked).</dd>
+<dd>Le nouveau total (devrait être &gt;= 0, non vérifié).</dd>
 </dl>
 </td></tr>
 </table>
@@ -345,7 +345,7 @@ Sets the number of completed sessions.  </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The total number of focus sessions the user has completed.</p></td></tr>
+<p class="return">Le nombre total de sessions de concentration terminées par l'utilisateur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -353,13 +353,13 @@ Sets the number of completed sessions.  </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Sets the number of completed cycles.  </p>
+Définit le nombre de cycles terminés.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
-<dd>The user to modify.</dd>
+<dd>L'utilisateur à modifier.</dd>
 <dt>nb</dt>
-<dd>The new total (should be &gt;= 0, not checked).</dd>
+<dd>Le nouveau total (devrait être &gt;= 0, non vérifié).</dd>
 </dl>
 </td></tr>
 </table>
@@ -369,7 +369,7 @@ Sets the number of completed cycles.  </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The total number of cycles the user has completed.</p></td></tr>
+<p class="return">Le nombre total de cycles terminés par l'utilisateur.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -377,13 +377,13 @@ Sets the number of completed cycles.  </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Sets the total focus time.  </p>
+Définit le temps de concentration total.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
-<dd>The user to modify.</dd>
+<dd>L'utilisateur à modifier.</dd>
 <dt>nb</dt>
-<dd>The new total, same unit as the cycle durations (should be &gt;= 0, not checked).</dd>
+<dd>Le nouveau total, dans la même unité que les durées des cycles (devrait être &gt;= 0, non vérifié).</dd>
 </dl>
 </td></tr>
 </table>
@@ -393,7 +393,7 @@ Sets the total focus time.  </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The total focus time, in the unit used for cycle durations.</p></td></tr>
+<p class="return">Le temps de concentration total, dans l'unité utilisée pour les durées des cycles.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -401,7 +401,7 @@ Sets the total focus time.  </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">A copy of the user's forest. Modifying the copy does not change the user; use addTree to grow trees.</p></td></tr>
+<p class="return">Une copie de la forêt de l'utilisateur. Modifier la copie ne change pas l'utilisateur ; utiliser addTree pour cultiver des arbres.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -409,7 +409,7 @@ Sets the total focus time.  </p>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">The date the account was created.</p></td></tr>
+<p class="return">La date de création du compte.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -417,13 +417,13 @@ Sets the total focus time.  </p>
 </tr>
 <tr><td colspan="1">
 <p>
-Adds one grown tree of the given species to the user's forest. If the species is new, it is first added at the end of the list. If the species is new and the forest already holds MAX_SPECIES species, nothing happens.  </p>
+Ajoute un arbre cultivé de l'espèce donnée à la forêt de l'utilisateur. Si l'espèce est nouvelle, elle est d'abord ajoutée à la fin de la liste. Si l'espèce est nouvelle et que la forêt contient déjà MAX_SPECIES espèces, il ne se passe rien.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>user</dt>
-<dd>The user to modify.</dd>
+<dd>L'utilisateur à modifier.</dd>
 <dt>tree</dt>
-<dd>Name of the species (case-sensitive).</dd>
+<dd>Nom de l'espèce (sensible à la casse).</dd>
 </dl>
 </td></tr>
 </table>
@@ -434,7 +434,7 @@ Adds one grown tree of the given species to the user's forest. If the species is
 </tr>
 <tr><td colspan="1">
 <p>
-Maximum number of different tree species a forest can hold.</p>
+Nombre maximum d'espèces d'arbres différentes qu'une forêt peut contenir.</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Produit par <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>

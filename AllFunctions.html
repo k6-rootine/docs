@@ -36,12 +36,12 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="CycleData.html#abandonCycle-Tcycle-">abandonCycle</a></td>
 <td class="itemunit"><a class="bold" href="CycleData.html">CycleData</a></td>
-<td class="itemdesc"><p>Gives up the cycle: back to NOT_STARTED, session 0, phase FOCUS.</p></td>
+<td class="itemdesc"><p>Abandonne le cycle : retour à NOT_STARTED, session 0, phase FOCUS.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#addTree-TUser-string-">addTree</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Adds one grown tree of the given species to the user's forest.</p></td>
+<td class="itemdesc"><p>Ajoute un arbre cultivé de l'espèce donnée à la forêt de l'utilisateur.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="IHM.html#askConfirmation-String-Boolean-">askConfirmation</a></td>
@@ -131,12 +131,12 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#findSpecies-TForest-string-">findSpecies</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Searches for a species by name (case-sensitive, exact match).</p></td>
+<td class="itemdesc"><p>Recherche une espèce par son nom (sensible à la casse, correspondance exacte).</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="CycleData.html#finishCycle-TCycle-">finishCycle</a></td>
 <td class="itemunit"><a class="bold" href="CycleData.html">CycleData</a></td>
-<td class="itemdesc"><p>Marks the cycle as FINISHED.</p></td>
+<td class="itemdesc"><p>Marque le cycle comme FINISHED.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="FileManager.html#getAvailableSpecies">getAvailableSpecies</a></td>
@@ -171,12 +171,12 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="TimerManager.html#getDuration-TTimer-">getDuration</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>Retourne le temps écoulé du minuteur</p></td>
+<td class="itemdesc"><p>Retourne la durée totale du minuteur</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TimerManager.html#getElapsedTime-TTimer-">getElapsedTime</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>Créé un minuteur avec une durée donnée</p></td>
+<td class="itemdesc"><p>Retourne le temps écoulé du minuteur</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="TreeData.html#getElement-TPhase-LongInt-LongInt-">getElement</a></td>
@@ -191,7 +191,7 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#getForestSpeciesName-TForest-LongInt-">getForestSpeciesName</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Gets the name of the species at a given position.</p></td>
+<td class="itemdesc"><p>Donne le nom de l'espèce à une position donnée.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="UserData.html#getJoinDate-TUser-">getJoinDate</a></td>
@@ -241,7 +241,7 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#getNbTreesGrown-TForest-LongInt-">getNbTreesGrown</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Gets the number of trees grown for one species.</p></td>
+<td class="itemdesc"><p>Donne le nombre d'arbres cultivés pour une espèce.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TreeData.html#getPhase-TTree-LongInt-">getPhase</a></td>
@@ -251,7 +251,7 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="TimerManager.html#getRemainingTime-TTimer-">getRemainingTime</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>Retourne la durée totale du minuteur</p></td>
+<td class="itemdesc"><p>Retourne le temps restant du minuteur</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TreeData.html#getSpeciesName-TTree-">getSpeciesName</a></td>
@@ -279,7 +279,7 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="UserData.html#getusername-TUser-">getusername</a></td>
+<td class="itemname"><a class="bold" href="UserData.html#getUsername-TUser-">getUsername</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
@@ -291,17 +291,17 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="CycleData.html#initialiseCycle-TMode-LongInt-LongInt-LongInt-LongInt-">initialiseCycle</a></td>
 <td class="itemunit"><a class="bold" href="CycleData.html">CycleData</a></td>
-<td class="itemdesc"><p>Creates a new cycle, ready to be started.</p></td>
+<td class="itemdesc"><p>Crée un nouveau cycle, prêt à être démarré.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="UserData.html#initialiseDate-LongInt-LongInt-LongInt-">initialiseDate</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Builds a date with its tree parts.</p></td>
+<td class="itemdesc"><p>Construit une date à partir de ses trois parties.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#initialiseForest">initialiseForest</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Creates an empty forest: no species, all names '' and all counts 0.</p></td>
+<td class="itemdesc"><p>Crée une forêt vide : aucune espèce, tous les noms '' et tous les compteurs à 0.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TreeData.html#initialisePhase">initialisePhase</a></td>
@@ -311,7 +311,7 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="TimerManager.html#initialiseTimer-LongInt-">initialiseTimer</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>Créé un minuteur avec une durée donnée</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TreeData.html#initialiseTree">initialiseTree</a></td>
@@ -321,17 +321,17 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#initialiseUser">initialiseUser</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Creates a new, blank user.</p></td>
+<td class="itemdesc"><p>Crée un nouvel utilisateur vierge.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TimerManager.html#isFinished-TTimer-">isFinished</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>Vérifie si le minuteur est en pause</p></td>
+<td class="itemdesc"><p>Vérifie si le minuteur est terminé</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="TimerManager.html#isPaused-TTimer-">isPaused</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>Retourne le temps restant du minuteur</p></td>
+<td class="itemdesc"><p>Vérifie si le minuteur est en pause</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="Utilities.html#isValidName-String-">isValidName</a></td>
@@ -361,12 +361,12 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="CycleData.html#nextPhase-TCycle-">nextPhase</a></td>
 <td class="itemunit"><a class="bold" href="CycleData.html">CycleData</a></td>
-<td class="itemdesc"><p>Moves to the next phase.</p></td>
+<td class="itemdesc"><p>Passe à la phase suivante.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TimerManager.html#pauseTimer-TTimer-">pauseTimer</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>Avance le minuteur d'un certain temps</p></td>
+<td class="itemdesc"><p>Met le minuteur en pause</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="IHM.html#pollBrowseInput-TBrowseAction-">pollBrowseInput</a></td>
@@ -401,7 +401,7 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="TimerManager.html#resumeTimer-TTimer-">resumeTimer</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>Met le minuteur en pause</p></td>
+<td class="itemdesc"><p>Reprend le minuteur</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="Utilities.html#RootineLogo-LongInt-LongInt-">RootineLogo</a></td>
@@ -411,7 +411,7 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="FileManager.html#saveUser-TUser-">saveUser</a></td>
 <td class="itemunit"><a class="bold" href="FileManager.html">FileManager</a></td>
-<td class="itemdesc"><p>Enregistre un utilisateur dans un fichier. Créé/actualise <code>username.dat</code> et remplace l'ancienne sauvegarde. Le pseudo doit être un nom de fichier valide, sans chemin.</p></td>
+<td class="itemdesc"><p>Enregistre un utilisateur dans un fichier. Créé/actualise <code>username.user</code> et remplace l'ancienne sauvegarde. Le pseudo doit être un nom de fichier valide, sans chemin.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TreeData.html#setColor-TPhase-LongInt-LongInt-TColor-">setColor</a></td>
@@ -426,17 +426,17 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="UserData.html#setName-TUser-string-">setName</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Sets the display name of the user.</p></td>
+<td class="itemdesc"><p>Définit le nom affiché de l'utilisateur.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#setNbCyclesDone-TUser-LongInt-">setNbCyclesDone</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Sets the number of completed cycles.</p></td>
+<td class="itemdesc"><p>Définit le nombre de cycles terminés.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="UserData.html#setNbSessionsDone-TUser-LongInt-">setNbSessionsDone</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Sets the number of completed sessions.</p></td>
+<td class="itemdesc"><p>Définit le nombre de sessions terminées.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="TreeData.html#setPhase-TTree-LongInt-TPhase-">setPhase</a></td>
@@ -451,7 +451,7 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#setTotalFocusTime-TUser-LongInt-">setTotalFocusTime</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Sets the total focus time.</p></td>
+<td class="itemdesc"><p>Définit le temps de concentration total.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TreeData.html#setTreeDescription-TTree-String-">setTreeDescription</a></td>
@@ -461,22 +461,22 @@
 <tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#setUserDescription-TUser-string-">setUserDescription</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Sets the description.</p></td>
+<td class="itemdesc"><p>Définit la description.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="UserData.html#setUsername-TUser-string-">setUsername</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
-<td class="itemdesc"><p>Sets the username.</p></td>
+<td class="itemdesc"><p>Définit le nom d'utilisateur.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="CycleData.html#startCycle-TCycle-">startCycle</a></td>
 <td class="itemunit"><a class="bold" href="CycleData.html">CycleData</a></td>
-<td class="itemdesc"><p>Starts the cycle: goes to session 1 and state IN_PROGRESS.</p></td>
+<td class="itemdesc"><p>Démarre le cycle : passe à la session 1, à la phase FOCUS et à l'état IN_PROGRESS.</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="TimerManager.html#tick-TTimer-LongInt-">tick</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
-<td class="itemdesc"><p>Vérifie si le minuteur est terminé</p></td>
+<td class="itemdesc"><p>Avance le minuteur d'un certain temps</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="FileManager.html#treeExists-string-">treeExists</a></td>
