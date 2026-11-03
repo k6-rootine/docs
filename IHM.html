@@ -28,7 +28,7 @@
 <div class="container-fluid py-3 px-4">
 <h1 class="unit">Unit IHM</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p class="nodescription">This item has no description.</p><span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
@@ -37,25 +37,25 @@
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#displayStartMenu-TStartChoice-">displayStartMenu</a></strong>(var choice: <a href="IHM.html#TStartChoice">TStartChoice</a>);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayMainMenu-TMainMenuChoice-">displayMainMenu</a></strong>(var choice: <a href="IHM.html#TMainMenuChoice">TMainMenuChoice</a>);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayMainMenu-TMainMenuChoice-TUser-">displayMainMenu</a></strong>(var choice: <a href="IHM.html#TMainMenuChoice">TMainMenuChoice</a>; user: <a href="UserData.TUser.html">TUser</a>);</code></td>
 </tr>
 <tr class="list visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#displayLogin-String-">displayLogin</a></strong>(var username: String);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayRegister-String-String-String-">displayRegister</a></strong>(var fullname, username, description: String);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayRegister-String-String-String-">displayRegister</a></strong>(var firstname, username, description: String);</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayProfile-TUser-">displayProfile</a></strong>(user: TUser);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayProfile-TUser-">displayProfile</a></strong>(user: <a href="UserData.TUser.html">TUser</a>);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayForestOverview-TForest-LongInt-">displayForestOverview</a></strong>(forest: TForest; var idx: LongInt);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayForestOverview-TForest-LongInt-">displayForestOverview</a></strong>(forest: <a href="UserData.TForest.html">TForest</a>; var idx: LongInt);</code></td>
 </tr>
 <tr class="list visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#displayTreeFull-TTree-">displayTreeFull</a></strong>(tree: <a href="TreeData.TTree.html">TTree</a>);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCycleModeMenu-TMode-">displayCycleModeMenu</a></strong>(var mode: TMode);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCycleModeMenu-TMode-">displayCycleModeMenu</a></strong>(var mode: <a href="CycleData.html#TMode">TMode</a>);</code></td>
 </tr>
 <tr class="list visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCustomConfiguration-LongInt-LongInt-LongInt-LongInt-">displayCustomConfiguration</a></strong>(var focusDuration, shortBreakDuration, longBreakDuration, nbSessionsBeforeLongBreak: LongInt);</code></td>
@@ -76,13 +76,13 @@
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#renderClockArea-LongInt-">renderClockArea</a></strong>(time: LongInt);</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderInstructionsArea-TPhaseSession-">renderInstructionsArea</a></strong>(sessionPhase: TPhaseSession);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderInstructionsArea-TPhaseSession-">renderInstructionsArea</a></strong>(sessionPhase: <a href="CycleData.html#TPhaseSession">TPhaseSession</a>);</code></td>
 </tr>
 <tr class="list2 visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#pollSessionInput-TSessionAction-">pollSessionInput</a></strong>(var action: <a href="IHM.html#TSessionAction">TSessionAction</a>);</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCycleEnd-TCycle-Boolean-">displayCycleEnd</a></strong>(cycle: TCycle; success: Boolean);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCycleEnd-TCycle-Boolean-">displayCycleEnd</a></strong>(cycle: <a href="CycleData.TCycle.html">TCycle</a>; success: Boolean);</code></td>
 </tr>
 <tr class="list2 visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#displayMessage-String-">displayMessage</a></strong>(msg: String);</code></td>
@@ -92,6 +92,12 @@
 </tr>
 <tr class="list2 visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#askConfirmation-String-Boolean-">askConfirmation</a></strong>(msg: String; var answer: Boolean);</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayOuterBorder">displayOuterBorder</a></strong>();</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayInnerBorder">displayInnerBorder</a></strong>();</code></td>
 </tr>
 <tr class="list visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#waitForKey">waitForKey</a></strong>();</code></td>
@@ -112,6 +118,24 @@
 <td class="itemcode"><code><strong><a href="IHM.html#TSessionAction">TSessionAction</a></strong> = (...);</code></td>
 </tr>
 </table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#BORDER_CHAR">BORDER_CHAR</a></strong> = '*';</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#BORDER_WIDTH">BORDER_WIDTH</a></strong> = 120;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#BORDER_HEIGHT">BORDER_HEIGHT</a></strong> = 35;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#BORDER_TREE_VERTICAL">BORDER_TREE_VERTICAL</a></strong> = 80;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#BORDER_CLOCK_HORIZONTAL">BORDER_CLOCK_HORIZONTAL</a></strong> = 20;</code></td>
+</tr>
+</table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Functions and Procedures</h3>
 <table class="detail visibility-published wide_list">
@@ -123,7 +147,7 @@
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayMainMenu-TMainMenuChoice-"></span><code>procedure <strong>displayMainMenu</strong>(var choice: <a href="IHM.html#TMainMenuChoice">TMainMenuChoice</a>);</code></td>
+<td class="itemcode"><span id="displayMainMenu-TMainMenuChoice-TUser-"></span><code>procedure <strong>displayMainMenu</strong>(var choice: <a href="IHM.html#TMainMenuChoice">TMainMenuChoice</a>; user: <a href="UserData.TUser.html">TUser</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -137,21 +161,21 @@
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayRegister-String-String-String-"></span><code>procedure <strong>displayRegister</strong>(var fullname, username, description: String);</code></td>
+<td class="itemcode"><span id="displayRegister-String-String-String-"></span><code>procedure <strong>displayRegister</strong>(var firstname, username, description: String);</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayProfile-TUser-"></span><code>procedure <strong>displayProfile</strong>(user: TUser);</code></td>
+<td class="itemcode"><span id="displayProfile-TUser-"></span><code>procedure <strong>displayProfile</strong>(user: <a href="UserData.TUser.html">TUser</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayForestOverview-TForest-LongInt-"></span><code>procedure <strong>displayForestOverview</strong>(forest: TForest; var idx: LongInt);</code></td>
+<td class="itemcode"><span id="displayForestOverview-TForest-LongInt-"></span><code>procedure <strong>displayForestOverview</strong>(forest: <a href="UserData.TForest.html">TForest</a>; var idx: LongInt);</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -165,7 +189,7 @@
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayCycleModeMenu-TMode-"></span><code>procedure <strong>displayCycleModeMenu</strong>(var mode: TMode);</code></td>
+<td class="itemcode"><span id="displayCycleModeMenu-TMode-"></span><code>procedure <strong>displayCycleModeMenu</strong>(var mode: <a href="CycleData.html#TMode">TMode</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -214,7 +238,7 @@
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="renderInstructionsArea-TPhaseSession-"></span><code>procedure <strong>renderInstructionsArea</strong>(sessionPhase: TPhaseSession);</code></td>
+<td class="itemcode"><span id="renderInstructionsArea-TPhaseSession-"></span><code>procedure <strong>renderInstructionsArea</strong>(sessionPhase: <a href="CycleData.html#TPhaseSession">TPhaseSession</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -228,7 +252,7 @@
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayCycleEnd-TCycle-Boolean-"></span><code>procedure <strong>displayCycleEnd</strong>(cycle: TCycle; success: Boolean);</code></td>
+<td class="itemcode"><span id="displayCycleEnd-TCycle-Boolean-"></span><code>procedure <strong>displayCycleEnd</strong>(cycle: <a href="CycleData.TCycle.html">TCycle</a>; success: Boolean);</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -256,6 +280,20 @@
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
+<td class="itemcode"><span id="displayOuterBorder"></span><code>procedure <strong>displayOuterBorder</strong>();</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="displayInnerBorder"></span><code>procedure <strong>displayInnerBorder</strong>();</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
 <td class="itemcode"><span id="waitForKey"></span><code>procedure <strong>waitForKey</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
@@ -274,7 +312,9 @@
 <li>
 <span id="REGISTER">REGISTER</span></li>
 <li>
-<span id="QUIT">QUIT</span></li>
+<span id="QUIT_START">QUIT_START</span></li>
+<li>
+<span id="NONE_START">NONE_START</span></li>
 </ul>
 </td></tr>
 </table>
@@ -294,7 +334,9 @@
 <li>
 <span id="START">START</span></li>
 <li>
-<span id="QUIT">QUIT</span></li>
+<span id="QUIT_MAINMENU">QUIT_MAINMENU</span></li>
+<li>
+<span id="NONE_MAINMENU">NONE_MAINMENU</span></li>
 </ul>
 </td></tr>
 </table>
@@ -306,7 +348,7 @@
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
 <ul>
 <li>
-<span id="NONE">NONE</span></li>
+<span id="ACTION_NONE">ACTION_NONE</span></li>
 <li>
 <span id="NEXT">NEXT</span></li>
 <li>
@@ -324,7 +366,7 @@
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Values</h6>
 <ul>
 <li>
-<span id="NONE">NONE</span></li>
+<span id="SESSION_ACTION_NONE">SESSION_ACTION_NONE</span></li>
 <li>
 <span id="TOGGLE_PAUSE">TOGGLE_PAUSE</span></li>
 <li>
@@ -332,6 +374,46 @@
 <li>
 <span id="CHANGE_TREE">CHANGE_TREE</span></li>
 </ul>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="BORDER_CHAR"></span><code><strong>BORDER_CHAR</strong> = '*';</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="BORDER_WIDTH"></span><code><strong>BORDER_WIDTH</strong> = 120;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="BORDER_HEIGHT"></span><code><strong>BORDER_HEIGHT</strong> = 35;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="BORDER_TREE_VERTICAL"></span><code><strong>BORDER_TREE_VERTICAL</strong> = 80;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+dimension w/o border is 118x33, w/ border is 120x35</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="BORDER_CLOCK_HORIZONTAL"></span><code><strong>BORDER_CLOCK_HORIZONTAL</strong> = 20;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+dimension of tree w/ border is 80x35, w/o border is 78x33</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
