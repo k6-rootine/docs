@@ -19,7 +19,7 @@ mkdir ..\docs
 ```
 Then, run the command to make the documentation:
 ```bash
-pasdoc --output=..\docs --format=html --language=fr.utf8 --title="Rootine - Documentation" *.pas
+pasdoc --output=..\docs --format=html --language=fr.utf8 --title="Rootine - Documentation" UserData.pas TreeData.pas CycleData.pas TimerManager.pas FileManager.pas IHM.pas Utilities.pas WindowsManager.pas
 ```
 
 ### Linux (terminal)
@@ -29,7 +29,7 @@ mkdir -p ../docs
 ```
 Then, run the command to make the documentation:
 ```bash
-pasdoc --output=../docs --format=html --language=fr.utf8 --title="Rootine - Documentation" *.pas
+pasdoc --output=..\docs --format=html --language=fr.utf8 --title="Rootine - Documentation" UserData.pas TreeData.pas CycleData.pas TimerManager.pas FileManager.pas IHM.pas Utilities.pas WindowsManager.pas
 ```
 
 In the end, open `docs/index.html` in a browser to view the documentation.
