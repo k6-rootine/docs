@@ -54,13 +54,13 @@ Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des util
 <td class="itemcode"><code>function <strong><a href="FileManager.html#getAvailableSpecies">getAvailableSpecies</a></strong>(): <a href="FileManager.html#TStringArray">TStringArray</a>;</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>function <strong><a href="FileManager.html#getNbAvailableSpecies">getNbAvailableSpecies</a></strong>(): LongInt;</code></td>
+<td class="itemcode"><code>function <strong><a href="FileManager.html#getNbAvailableSpecies-TStringArray-">getNbAvailableSpecies</a></strong>(availableSpecies: <a href="FileManager.html#TStringArray">TStringArray</a>): LongInt;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><code><strong><a href="FileManager.html#TStringArray">TStringArray</a></strong> = array[1..<a href="FileManager.html#MAX_SPECIES">MAX_SPECIES</a>] of string;</code></td>
+<td class="itemcode"><code><strong><a href="FileManager.html#TStringArray">TStringArray</a></strong> = Array of String;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
@@ -118,7 +118,9 @@ Enregistre un utilisateur dans un fichier. Créé/actualise <code>username.user<
 </tr>
 <tr><td colspan="1">
 <p>
-(Charge un utilisateur depuis son fichier Le pseudo doit être un nom de fichier valide, sans chemin. Retourne un <code>TUser</code> vide si l'utilisateur n'existe pas.  </p>
+Charge un utilisateur depuis son fichier</p>
+<p>
+ Le pseudo doit être un nom de fichier valide, sans chemin. Retourne un <code>TUser</code> vide si l'utilisateur n'existe pas.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>username</dt>
@@ -150,7 +152,9 @@ Vérifie si une espèce d'arbre existe</p>
 </tr>
 <tr><td colspan="1">
 <p>
-(Charge une espèce d'arbre depuis son fichier Le nom de l'espèce doit être un nom de fichier valide, sans chemin. Retourne un <code>TTree</code> vide si l'espèce n'existe pas.  </p>
+Charge une espèce d'arbre depuis son fichier</p>
+<p>
+ Le nom de l'espèce doit être un nom de fichier valide, sans chemin. Retourne un <code>TTree</code> vide si l'espèce n'existe pas.  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>speciesName</dt>
@@ -173,24 +177,24 @@ Récupère la liste des espèces d'arbres disponibles</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="getNbAvailableSpecies"></span><code>function <strong>getNbAvailableSpecies</strong>(): LongInt;</code></td>
+<td class="itemcode"><span id="getNbAvailableSpecies-TStringArray-"></span><code>function <strong>getNbAvailableSpecies</strong>(availableSpecies: <a href="FileManager.html#TStringArray">TStringArray</a>): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
 Compte les espèces présentes dans la liste</p>
 <p>
- Compte les espèces presentes dans la liste, au maximum <code>MAX_SPECIES</code>. </p>
+ </p>
 <h6 class="description_section">Retourne</h6>
 <p class="return">Un entier représentant le nombre d'espèces présentes dans la liste.</p></td></tr>
 </table>
 <h3 class="detail">Types</h3>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="TStringArray"></span><code><strong>TStringArray</strong> = array[1..<a href="FileManager.html#MAX_SPECIES">MAX_SPECIES</a>] of string;</code></td>
+<td class="itemcode"><span id="TStringArray"></span><code><strong>TStringArray</strong> = Array of String;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Tableau contenant les noms des espèces d'arbres disponibles, au maximum <code>MAX_SPECIES</code>.</p>
+Tableau contenant les noms des espèces d'arbres disponibles.</p>
 </td></tr>
 </table>
 <h3 class="detail">Constantes</h3>

@@ -214,7 +214,7 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
-<td class="itemname"><a class="bold" href="FileManager.html#getNbAvailableSpecies">getNbAvailableSpecies</a></td>
+<td class="itemname"><a class="bold" href="FileManager.html#getNbAvailableSpecies-TStringArray-">getNbAvailableSpecies</a></td>
 <td class="itemunit"><a class="bold" href="FileManager.html">FileManager</a></td>
 <td class="itemdesc"><p>Compte les espèces présentes dans la liste</p></td>
 </tr>
@@ -346,12 +346,12 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="FileManager.html#loadTree-string-">loadTree</a></td>
 <td class="itemunit"><a class="bold" href="FileManager.html">FileManager</a></td>
-<td class="itemdesc"><p>(Charge une espèce d'arbre depuis son fichier Le nom de l'espèce doit être un nom de fichier valide, sans chemin.</p></td>
+<td class="itemdesc"><p>Charge une espèce d'arbre depuis son fichier</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="FileManager.html#loadUser-string-">loadUser</a></td>
 <td class="itemunit"><a class="bold" href="FileManager.html">FileManager</a></td>
-<td class="itemdesc"><p>(Charge un utilisateur depuis son fichier Le pseudo doit être un nom de fichier valide, sans chemin.</p></td>
+<td class="itemdesc"><p>Charge un utilisateur depuis son fichier</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="WindowsManager.html#lockConsoleWindow-LongInt-LongInt-">lockConsoleWindow</a></td>
@@ -389,106 +389,111 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="IHM.html#renderStatsArea">renderStatsArea</a></td>
+<td class="itemunit"><a class="bold" href="IHM.html">IHM</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="IHM.html#renderTreeArea-TTree-LongInt-">renderTreeArea</a></td>
 <td class="itemunit"><a class="bold" href="IHM.html">IHM</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="IHM.html#renderTreePreview-TTree-LongInt-LongInt-">renderTreePreview</a></td>
 <td class="itemunit"><a class="bold" href="IHM.html">IHM</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="TimerManager.html#resumeTimer-TTimer-">resumeTimer</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
 <td class="itemdesc"><p>Reprend le minuteur</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Utilities.html#RootineLogo-LongInt-LongInt-">RootineLogo</a></td>
 <td class="itemunit"><a class="bold" href="Utilities.html">Utilities</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="FileManager.html#saveUser-TUser-">saveUser</a></td>
 <td class="itemunit"><a class="bold" href="FileManager.html">FileManager</a></td>
 <td class="itemdesc"><p>Enregistre un utilisateur dans un fichier. Créé/actualise <code>username.user</code> et remplace l'ancienne sauvegarde. Le pseudo doit être un nom de fichier valide, sans chemin.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="TreeData.html#setColor-TPhase-LongInt-LongInt-TColor-">setColor</a></td>
 <td class="itemunit"><a class="bold" href="TreeData.html">TreeData</a></td>
 <td class="itemdesc"><p>Modifie la couleur du caractère à une position de la phase.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="TreeData.html#setElement-TPhase-LongInt-LongInt-Char-">setElement</a></td>
 <td class="itemunit"><a class="bold" href="TreeData.html">TreeData</a></td>
 <td class="itemdesc"><p>Modifie le caractère affiché à une position de la phase.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#setName-TUser-string-">setName</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
 <td class="itemdesc"><p>Définit le nom affiché de l'utilisateur.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="UserData.html#setNbCyclesDone-TUser-LongInt-">setNbCyclesDone</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
 <td class="itemdesc"><p>Définit le nombre de cycles terminés.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#setNbSessionsDone-TUser-LongInt-">setNbSessionsDone</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
 <td class="itemdesc"><p>Définit le nombre de sessions terminées.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="TreeData.html#setPhase-TTree-LongInt-TPhase-">setPhase</a></td>
 <td class="itemunit"><a class="bold" href="TreeData.html">TreeData</a></td>
 <td class="itemdesc"><p>Définit une phase de croissance de l'arbre.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="TreeData.html#setSpeciesName-TTree-String-">setSpeciesName</a></td>
 <td class="itemunit"><a class="bold" href="TreeData.html">TreeData</a></td>
 <td class="itemdesc"><p>Modifie le nom de l'espèce de l'arbre.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="UserData.html#setTotalFocusTime-TUser-LongInt-">setTotalFocusTime</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
 <td class="itemdesc"><p>Définit le temps de concentration total.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="TreeData.html#setTreeDescription-TTree-String-">setTreeDescription</a></td>
 <td class="itemunit"><a class="bold" href="TreeData.html">TreeData</a></td>
 <td class="itemdesc"><p>Modifie la description de l'espèce de l'arbre.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="UserData.html#setUserDescription-TUser-string-">setUserDescription</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
 <td class="itemdesc"><p>Définit la description.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="UserData.html#setUsername-TUser-string-">setUsername</a></td>
 <td class="itemunit"><a class="bold" href="UserData.html">UserData</a></td>
 <td class="itemdesc"><p>Définit le nom d'utilisateur.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="CycleData.html#startCycle-TCycle-">startCycle</a></td>
 <td class="itemunit"><a class="bold" href="CycleData.html">CycleData</a></td>
 <td class="itemdesc"><p>Démarre le cycle : passe à la session 1, à la phase FOCUS et à l'état IN_PROGRESS.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="TimerManager.html#tick-TTimer-LongInt-">tick</a></td>
 <td class="itemunit"><a class="bold" href="TimerManager.html">TimerManager</a></td>
 <td class="itemdesc"><p>Avance le minuteur d'un certain temps</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="FileManager.html#treeExists-string-">treeExists</a></td>
 <td class="itemunit"><a class="bold" href="FileManager.html">FileManager</a></td>
 <td class="itemdesc"><p>Vérifie si une espèce d'arbre existe</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="FileManager.html#userExists-string-">userExists</a></td>
 <td class="itemunit"><a class="bold" href="FileManager.html">FileManager</a></td>
 <td class="itemdesc"><p>Vérifie si un utilisateur existe</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="IHM.html#waitForKey">waitForKey</a></td>
 <td class="itemunit"><a class="bold" href="IHM.html">IHM</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>

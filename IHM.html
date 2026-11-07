@@ -102,6 +102,9 @@
 <tr class="list visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#waitForKey">waitForKey</a></strong>();</code></td>
 </tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderStatsArea">renderStatsArea</a></strong>();</code></td>
+</tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
@@ -124,7 +127,7 @@
 <td class="itemcode"><code><strong><a href="IHM.html#BORDER_CHAR">BORDER_CHAR</a></strong> = '*';</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code><strong><a href="IHM.html#BORDER_WIDTH">BORDER_WIDTH</a></strong> = 120;</code></td>
+<td class="itemcode"><code><strong><a href="IHM.html#BORDER_WIDTH">BORDER_WIDTH</a></strong> = 121;</code></td>
 </tr>
 <tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="IHM.html#BORDER_HEIGHT">BORDER_HEIGHT</a></strong> = 35;</code></td>
@@ -133,7 +136,10 @@
 <td class="itemcode"><code><strong><a href="IHM.html#BORDER_TREE_VERTICAL">BORDER_TREE_VERTICAL</a></strong> = 80;</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code><strong><a href="IHM.html#BORDER_CLOCK_HORIZONTAL">BORDER_CLOCK_HORIZONTAL</a></strong> = 20;</code></td>
+<td class="itemcode"><code><strong><a href="IHM.html#BORDER_CLOCK_HORIZONTAL">BORDER_CLOCK_HORIZONTAL</a></strong> = 13;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#BORDER_STATS_HORIZONTAL">BORDER_STATS_HORIZONTAL</a></strong> = 20;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -299,6 +305,13 @@
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="renderStatsArea"></span><code>procedure <strong>renderStatsArea</strong>();</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
 <h3 class="detail">Types</h3>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -386,7 +399,7 @@
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="BORDER_WIDTH"></span><code><strong>BORDER_WIDTH</strong> = 120;</code></td>
+<td class="itemcode"><span id="BORDER_WIDTH"></span><code><strong>BORDER_WIDTH</strong> = 121;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -409,11 +422,20 @@ dimension w/o border is 118x33, w/ border is 120x35</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="BORDER_CLOCK_HORIZONTAL"></span><code><strong>BORDER_CLOCK_HORIZONTAL</strong> = 20;</code></td>
+<td class="itemcode"><span id="BORDER_CLOCK_HORIZONTAL"></span><code><strong>BORDER_CLOCK_HORIZONTAL</strong> = 13;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
 dimension of tree w/ border is 80x35, w/o border is 78x33</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="BORDER_STATS_HORIZONTAL"></span><code><strong>BORDER_STATS_HORIZONTAL</strong> = 20;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+dimension of clock area w/ border is 40x20, w/o border is 38x18</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Produit par <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
