@@ -28,9 +28,11 @@
 <div class="container-fluid py-3 px-4">
 <h1 class="unit">Unité Utilities</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
-<p class="nodescription">This item has no description.</p><span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
+<p>
+Cette unité regroupe les procédures et fonctions utilitaires du programme.</p>
+<span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
@@ -45,6 +47,54 @@
 <tr class="list2 visibility-published">
 <td class="itemcode"><code>function <strong><a href="Utilities.html#isValidName-String-">isValidName</a></strong>(fullname: String): Boolean;</code></td>
 </tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code>function <strong><a href="Utilities.html#computeGrowthPhase-LongInt-LongInt-LongInt-">computeGrowthPhase</a></strong>(nbPhases, elapsed, duration: LongInt): LongInt;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code>procedure <strong><a href="Utilities.html#writeWrapped-String-LongInt-">writeWrapped</a></strong>(text: String; width: LongInt);</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code>function <strong><a href="Utilities.html#waitKeyUntil-Int64-LongInt-Char-">waitKeyUntil</a></strong>(deadline: Int64; countdownRow: LongInt; var key: Char): Boolean;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code>function <strong><a href="Utilities.html#readIntegerUntil-String-LongInt-LongInt-Int64-LongInt-Boolean-">readIntegerUntil</a></strong>(prompt: String; minValue, maxValue: LongInt; deadline: Int64; countdownRow: LongInt; var timedOut: Boolean): LongInt;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code>function <strong><a href="Utilities.html#readInteger-String-LongInt-LongInt-">readInteger</a></strong>(prompt: String; minValue, maxValue: LongInt): LongInt;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code>procedure <strong><a href="Utilities.html#enterArea-LongInt-LongInt-LongInt-LongInt-">enterArea</a></strong>(x1, y1, x2, y2: LongInt);</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code>procedure <strong><a href="Utilities.html#leaveArea">leaveArea</a></strong>();</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code>function <strong><a href="Utilities.html#currentTick">currentTick</a></strong>(): Int64;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="Utilities.html#KEY_SPECIAL">KEY_SPECIAL</a></strong> = #0;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="Utilities.html#KEY_BACKSPACE">KEY_BACKSPACE</a></strong> = #8;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="Utilities.html#KEY_ENTER">KEY_ENTER</a></strong> = #13;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="Utilities.html#BORDER_WIDTH">BORDER_WIDTH</a></strong> = 121;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="Utilities.html#BORDER_HEIGHT">BORDER_HEIGHT</a></strong> = 35;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="Utilities.html#SCREEN_MARGIN_X">SCREEN_MARGIN_X</a></strong> = 4;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="Utilities.html#SCREEN_MARGIN_Y">SCREEN_MARGIN_Y</a></strong> = 2;</code></td>
+</tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Fonctions et procédures</h3>
@@ -53,28 +103,283 @@
 <td class="itemcode"><span id="RootineLogo-LongInt-LongInt-"></span><code>procedure <strong>RootineLogo</strong>(X, Y: LongInt);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Dessine le logo Rootine</p>
+<p>
+  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>X</dt>
+<dd>La colonne du coin supérieur gauche du logo</dd>
+<dt>Y</dt>
+<dd>La ligne du coin supérieur gauche du logo</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="displayClockNumber-LongInt-"></span><code>procedure <strong>displayClockNumber</strong>(number: LongInt);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Écrit un symbole de l'horloge en grand</p>
+<p>
+ </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>number</dt>
+<dd>Le chiffre à écrire, de 0 à 9, ou -1 pour les deux points</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="isValidUsername-String-"></span><code>function <strong>isValidUsername</strong>(username: String): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Vérifie qu'un nom d'utilisateur est valide</p>
+<p>
+  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>username</dt>
+<dd>Le nom d'utilisateur à vérifier</dd>
+</dl>
+<h6 class="description_section">Retourne</h6>
+<p class="return">Vrai si le nom d'utilisateur est valide</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="isValidName-String-"></span><code>function <strong>isValidName</strong>(fullname: String): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
+<p>
+Vérifie qu'un prénom est valide</p>
+<p>
+  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>fullname</dt>
+<dd>le prénom à vérifier</dd>
+</dl>
+<h6 class="description_section">Retourne</h6>
+<p class="return">Vrai si le prénom est valide</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="computeGrowthPhase-LongInt-LongInt-LongInt-"></span><code>function <strong>computeGrowthPhase</strong>(nbPhases, elapsed, duration: LongInt): LongInt;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcule la phase de croissance d'un arbre selon te temps écoulé</p>
+<p>
+    </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>nbPhases</dt>
+<dd>Le nombre de phases de l'arbre</dd>
+<dt>elapsed</dt>
+<dd>Le temps écoulé de la session, en secondes</dd>
+<dt>duration</dt>
+<dd>La durée totale de la session, en secondes</dd>
+</dl>
+<h6 class="description_section">Retourne</h6>
+<p class="return">Le numéro de la phase à afficher, de 1 à nbPhases, ou 0 si nbPhases n'est pas strictement positif</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="writeWrapped-String-LongInt-"></span><code>procedure <strong>writeWrapped</strong>(text: String; width: LongInt);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Écrit un texte sur plusieurs lignes sans couper les mots</p>
+<p>
+  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>text</dt>
+<dd>Le texte à écrire</dd>
+<dt>width</dt>
+<dd>La largeur de la zone d'écriture, en nombre de colonnes</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="waitKeyUntil-Int64-LongInt-Char-"></span><code>function <strong>waitKeyUntil</strong>(deadline: Int64; countdownRow: LongInt; var key: Char): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Attend une touche, avec une limite de temps éventuelle</p>
+<p>
+    </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>deadline</dt>
+<dd>La fin de l'attente, en ms, ou 0 s'il n'y a pas de limite de temps</dd>
+<dt>countdownRow</dt>
+<dd>La ligne de la fenêtre courante où le temps restant est affiché</dd>
+<dt>key</dt>
+<dd>La touche pressée</dd>
+</dl>
+<h6 class="description_section">Retourne</h6>
+<p class="return">Vrai si une touche a été pressée. Faux si le temps est écoulé</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="readIntegerUntil-String-LongInt-LongInt-Int64-LongInt-Boolean-"></span><code>function <strong>readIntegerUntil</strong>(prompt: String; minValue, maxValue: LongInt; deadline: Int64; countdownRow: LongInt; var timedOut: Boolean): LongInt;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Lit un nombre entier compris dans un intervalle, avec une limite de temps éventuelle</p>
+<p>
+       </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>prompt</dt>
+<dd>Le message affiché devant la saisie</dd>
+<dt>minValue</dt>
+<dd>La plus petite valeur acceptée</dd>
+<dt>maxValue</dt>
+<dd>La plus grande valeur acceptée</dd>
+<dt>deadline</dt>
+<dd>La fin de la saisie, en ms, ou 0 s'il n'y a pas de limite de temps</dd>
+<dt>countdownRow</dt>
+<dd>La ligne de la fenêtre courante où le temps restant est affiché</dd>
+<dt>timedOut</dt>
+<dd>Vrai si la saise s'est arrêtée parce que le temps est écoulé</dd>
+</dl>
+<h6 class="description_section">Retourne</h6>
+<p class="return">Le nombre saisi. Si le temps est écoule, la valeur renvoyée n'est pas significative</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="readInteger-String-LongInt-LongInt-"></span><code>function <strong>readInteger</strong>(prompt: String; minValue, maxValue: LongInt): LongInt;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Lit un nombre entier compris dans un intervalle, sans limite de temps</p>
+<p>
+    </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>prompt</dt>
+<dd>Le message affiché devant la saisie</dd>
+<dt>minValue</dt>
+<dd>La plus petite valeur acceptée</dd>
+<dt>maxValue</dt>
+<dd>La plus grande valeur acceptée</dd>
+</dl>
+<h6 class="description_section">Retourne</h6>
+<p class="return">Le nombre saisi</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="enterArea-LongInt-LongInt-LongInt-LongInt-"></span><code>procedure <strong>enterArea</strong>(x1, y1, x2, y2: LongInt);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Restreint l'affichage à une zone rectangulaire du cadre</p>
+<p>
+ Les coordonnées sont celles du cadre : (1, 1) est son coin supérieur gauche. Les coins donnés font partie de la zone. Le curseur est placé en haut à gauche de la zone. Chaque appel doit être suivi d'un appel à leaveArea quand on a fini d'écrire dans la zone.    </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>x1</dt>
+<dd>La colonne du coin supérieur gauche de la zone</dd>
+<dt>y1</dt>
+<dd>La ligne du coin supérieur gauche de la zone</dd>
+<dt>x2</dt>
+<dd>La colonne du coin inférieur droit de la zone</dd>
+<dt>y2</dt>
+<dd>La ligne du coin inférieur droit de la zone</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="leaveArea"></span><code>procedure <strong>leaveArea</strong>();</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Remet l'affichage sur tout le cadre</p>
+<p>
+ Annule enterArea : les coordonnées sont de nouveau celles du cadre entier.</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="currentTick"></span><code>function <strong>currentTick</strong>(): Int64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Donne l'instant actuel en ms</p>
+<p>
+ Le nombre est celui de GetTickCount64. Il ne sert qu'à mesurer des durées en faisant la différence de deux appels. </p>
+<h6 class="description_section">Retourne</h6>
+<p class="return">Le nombre de ms écoulées depuis le démarrage de Windows</p></td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="KEY_SPECIAL"></span><code><strong>KEY_SPECIAL</strong> = #0;</code></td>
+</tr>
+<tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="KEY_BACKSPACE"></span><code><strong>KEY_BACKSPACE</strong> = #8;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Premier code d'une touche spéciale (flèches, F1...), suivi d'un second code</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="KEY_ENTER"></span><code><strong>KEY_ENTER</strong> = #13;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Touche Retour arrière</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="BORDER_WIDTH"></span><code><strong>BORDER_WIDTH</strong> = 121;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Touche Entrée</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="BORDER_HEIGHT"></span><code><strong>BORDER_HEIGHT</strong> = 35;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Nombre de colonnes de l'écran, cadre compris</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="SCREEN_MARGIN_X"></span><code><strong>SCREEN_MARGIN_X</strong> = 4;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Nombre de lignes de l'écran, cadre compris</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="SCREEN_MARGIN_Y"></span><code><strong>SCREEN_MARGIN_Y</strong> = 2;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Distance, en colonnes, entre les bords gauche et droit du terminal verrouillé et le cadre</p>
+</td></tr>
 </table>
 <hr><span class="appinfo"><em>Produit par <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
 </span>

@@ -28,7 +28,7 @@
 <div class="container-fluid py-3 px-4">
 <h1 class="unit">Unité FileManager</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p>
 Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des utilisateurs et des arbres.</p>
@@ -51,36 +51,27 @@ Cette unité gère la lecture et l'écriture des fichiers de sauvegarde des util
 <td class="itemcode"><code>function <strong><a href="FileManager.html#loadTree-string-">loadTree</a></strong>(speciesName: string): <a href="TreeData.TTree.html">TTree</a>;</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>function <strong><a href="FileManager.html#getAvailableSpecies">getAvailableSpecies</a></strong>(): <a href="FileManager.html#TStringArray">TStringArray</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="FileManager.html#getAvailableSpecies">getAvailableSpecies</a></strong>(): TStringArray;</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>function <strong><a href="FileManager.html#getNbAvailableSpecies-TStringArray-">getNbAvailableSpecies</a></strong>(availableSpecies: <a href="FileManager.html#TStringArray">TStringArray</a>): LongInt;</code></td>
-</tr>
-</table>
-<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
-<table class="summary wide_list">
-<tr class="list visibility-published">
-<td class="itemcode"><code><strong><a href="FileManager.html#TStringArray">TStringArray</a></strong> = Array of String;</code></td>
+<td class="itemcode"><code>function <strong><a href="FileManager.html#getNbAvailableSpecies-TStringArray-">getNbAvailableSpecies</a></strong>(availableSpecies: TStringArray): LongInt;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><code><strong><a href="FileManager.html#MAX_SPECIES">MAX_SPECIES</a></strong> = 100;</code></td>
-</tr>
-<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="FileManager.html#PATH_DATA">PATH_DATA</a></strong> = 'data/';</code></td>
 </tr>
-<tr class="list visibility-published">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="FileManager.html#PATH_USER">PATH_USER</a></strong> = 'data/users/';</code></td>
 </tr>
-<tr class="list2 visibility-published">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="FileManager.html#PATH_TREE">PATH_TREE</a></strong> = 'data/trees/';</code></td>
 </tr>
-<tr class="list visibility-published">
+<tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="FileManager.html#FILE_EXT_USER">FILE_EXT_USER</a></strong> = '.user';</code></td>
 </tr>
-<tr class="list2 visibility-published">
+<tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="FileManager.html#FILE_EXT_TREE">FILE_EXT_TREE</a></strong> = '.dat';</code></td>
 </tr>
 </table>
@@ -165,7 +156,7 @@ Charge une espèce d'arbre depuis son fichier</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="getAvailableSpecies"></span><code>function <strong>getAvailableSpecies</strong>(): <a href="FileManager.html#TStringArray">TStringArray</a>;</code></td>
+<td class="itemcode"><span id="getAvailableSpecies"></span><code>function <strong>getAvailableSpecies</strong>(): TStringArray;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -177,7 +168,7 @@ Récupère la liste des espèces d'arbres disponibles</p>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="getNbAvailableSpecies-TStringArray-"></span><code>function <strong>getNbAvailableSpecies</strong>(availableSpecies: <a href="FileManager.html#TStringArray">TStringArray</a>): LongInt;</code></td>
+<td class="itemcode"><span id="getNbAvailableSpecies-TStringArray-"></span><code>function <strong>getNbAvailableSpecies</strong>(availableSpecies: TStringArray): LongInt;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -187,26 +178,7 @@ Compte les espèces présentes dans la liste</p>
 <h6 class="description_section">Retourne</h6>
 <p class="return">Un entier représentant le nombre d'espèces présentes dans la liste.</p></td></tr>
 </table>
-<h3 class="detail">Types</h3>
-<table class="detail visibility-published wide_list">
-<tr class="list visibility-published">
-<td class="itemcode"><span id="TStringArray"></span><code><strong>TStringArray</strong> = Array of String;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Tableau contenant les noms des espèces d'arbres disponibles.</p>
-</td></tr>
-</table>
 <h3 class="detail">Constantes</h3>
-<table class="detail visibility-published wide_list">
-<tr class="list visibility-published">
-<td class="itemcode"><span id="MAX_SPECIES"></span><code><strong>MAX_SPECIES</strong> = 100;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Nombre maximum théorique d'espèces d'arbres.</p>
-</td></tr>
-</table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="PATH_DATA"></span><code><strong>PATH_DATA</strong> = 'data/';</code></td>

@@ -74,7 +74,7 @@ Cette unité stocke les paramètres du cycle et sa progression (session, phase, 
 <td class="itemcode"><code>procedure <strong><a href="CycleData.html#finishCycle-TCycle-">finishCycle</a></strong>(var cycle: <a href="CycleData.TCycle.html">TCycle</a>);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="CycleData.html#abandonCycle-Tcycle-">abandonCycle</a></strong>(var cycle: <a href="CycleData.TCycle.html">Tcycle</a>);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="CycleData.html#abandonCycle-TCycle-">abandonCycle</a></strong>(var cycle: <a href="CycleData.TCycle.html">TCycle</a>);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
@@ -139,7 +139,7 @@ Crée un nouveau cycle, prêt à être démarré. Le cycle commence à l'état N
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p><h6 class="description_section">Retourne</h6>
-<p class="return">L'état global du cycle (NOT_STARTED, IN_PROGRESS ou FINISHED).</p></td></tr>
+<p class="return">L'état global du cycle (NOT_STARTED, IN_PROGRESS, FINISHED ou ABANDONED).</p></td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
@@ -185,15 +185,15 @@ Marque le cycle comme FINISHED. Ne fait rien si l'état n'est pas IN_PROGRESS. <
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="abandonCycle-Tcycle-"></span><code>procedure <strong>abandonCycle</strong>(var cycle: <a href="CycleData.TCycle.html">Tcycle</a>);</code></td>
+<td class="itemcode"><span id="abandonCycle-TCycle-"></span><code>procedure <strong>abandonCycle</strong>(var cycle: <a href="CycleData.TCycle.html">TCycle</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Abandonne le cycle : retour à NOT_STARTED, session 0, phase FOCUS. Les paramètres (mode et durées) sont conservés, le cycle peut donc être redémarré. </p>
+Marque le cycle comme ABANDONED. Ne fait rien si l'état n'est pas IN_PROGRESS. </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>cycle</dt>
-<dd>Le cycle à réinitialiser (modifié).</dd>
+<dd>Le cycle à abandonner (modifié).</dd>
 </dl>
 </td></tr>
 </table>
@@ -232,7 +232,7 @@ La phase de la session dans laquelle se trouve actuellement l'utilisateur. (Avec
 <li>
 <span id="LONG_BREAK">LONG_BREAK</span></li>
 <li>
-<span id="NONE_PS">NONE_PS</span></li>
+<span id="NONE_PHASESESSION">NONE_PHASESESSION</span></li>
 </ul>
 </td></tr>
 </table>
@@ -251,6 +251,8 @@ L'état du cycle dans lequel se trouve actuellement l'utilisateur.</p>
 <span id="IN_PROGRESS">IN_PROGRESS</span></li>
 <li>
 <span id="FINISHED">FINISHED</span></li>
+<li>
+<span id="ABANDONED">ABANDONED</span></li>
 <li>
 <span id="NONE_STATE">NONE_STATE</span></li>
 </ul>

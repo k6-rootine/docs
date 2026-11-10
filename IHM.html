@@ -30,7 +30,9 @@
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
-<p class="nodescription">This item has no description.</p><span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
+<p>
+Cette unité gère toute l'interface avec l'utilisateur : l'affichage des écrans dans le terminal et la lecture au clavier. <br> Les procédures sont regroupées par préfixe : <br> + display : dessine un écran complet puis (généralement) attend la réponse de l'utilisateur <br> + render : redessine uniquement une zone de l'écran de session, sans attendre <br> + poll : lit le clavier sans attendre <br> Tous les écrans sont dessinés dans une fenêtre du terminal de 121 x 35, entourée d'un cadre. Le texte est blanc par défaut. <br></p>
+<span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
@@ -52,22 +54,22 @@
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#displayForestOverview-TForest-LongInt-">displayForestOverview</a></strong>(forest: <a href="UserData.TForest.html">TForest</a>; var idx: LongInt);</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayTreeFull-TTree-">displayTreeFull</a></strong>(tree: <a href="TreeData.TTree.html">TTree</a>);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayTreeFull-TTree-Int64-Boolean-">displayTreeFull</a></strong>(tree: <a href="TreeData.TTree.html">TTree</a>; deadline: Int64; var timedOut: Boolean);</code></td>
 </tr>
 <tr class="list2 visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCycleModeMenu-TMode-">displayCycleModeMenu</a></strong>(var mode: <a href="CycleData.html#TMode">TMode</a>);</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCustomConfiguration-LongInt-LongInt-LongInt-LongInt-">displayCustomConfiguration</a></strong>(var focusDuration, shortBreakDuration, longBreakDuration, nbSessionsBeforeLongBreak: LongInt);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCustomConfiguration-LongInt-LongInt-LongInt-LongInt-Boolean-">displayCustomConfiguration</a></strong>(var focusDuration, shortBreakDuration, longBreakDuration, nbSessionsBeforeLongBreak: LongInt; var confirmed: Boolean);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayPomodoroConfiguration">displayPomodoroConfiguration</a></strong>();</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayPomodoroConfiguration-LongInt-LongInt-LongInt-LongInt-Boolean-">displayPomodoroConfiguration</a></strong>(focusDuration, shortBreakDuration, longBreakDuration, nbSessionsBeforeLongBreak: LongInt; var confirmed: Boolean);</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderTreePreview-TTree-LongInt-LongInt-">renderTreePreview</a></strong>(tree: <a href="TreeData.TTree.html">TTree</a>; currentIdx, totalCnt: LongInt);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayTreeList-TStringArray-LongInt-Int64-Boolean-">displayTreeList</a></strong>(species: TStringArray; var choice: LongInt; deadline: Int64; var timedOut: Boolean);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#pollBrowseInput-TBrowseAction-">pollBrowseInput</a></strong>(var action: <a href="IHM.html#TBrowseAction">TBrowseAction</a>);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayTreeChoice-String-TTreeChoice-Int64-Boolean-">displayTreeChoice</a></strong>(speciesName: String; var action: <a href="IHM.html#TTreeChoice">TTreeChoice</a>; deadline: Int64; var timedOut: Boolean);</code></td>
 </tr>
 <tr class="list visibility-published">
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#renderTreeArea-TTree-LongInt-">renderTreeArea</a></strong>(tree: <a href="TreeData.TTree.html">TTree</a>; treePhase: LongInt);</code></td>
@@ -79,31 +81,37 @@
 <td class="itemcode"><code>procedure <strong><a href="IHM.html#renderInstructionsArea-TPhaseSession-">renderInstructionsArea</a></strong>(sessionPhase: <a href="CycleData.html#TPhaseSession">TPhaseSession</a>);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#pollSessionInput-TSessionAction-">pollSessionInput</a></strong>(var action: <a href="IHM.html#TSessionAction">TSessionAction</a>);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#pollSessionInput-TPhaseSession-TSessionAction-">pollSessionInput</a></strong>(sessionPhase: <a href="CycleData.html#TPhaseSession">TPhaseSession</a>; var action: <a href="IHM.html#TSessionAction">TSessionAction</a>);</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCycleEnd-TCycle-Boolean-">displayCycleEnd</a></strong>(cycle: <a href="CycleData.TCycle.html">TCycle</a>; success: Boolean);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayCycleEnd-TCycle-">displayCycleEnd</a></strong>(cycle: <a href="CycleData.TCycle.html">TCycle</a>);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayMessage-String-">displayMessage</a></strong>(msg: String);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayQuitConfirmation">displayQuitConfirmation</a></strong>();</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayError-String-">displayError</a></strong>(msg: String);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#pollQuitConfirmation-TQuitAnswer-">pollQuitConfirmation</a></strong>(var answer: <a href="IHM.html#TQuitAnswer">TQuitAnswer</a>);</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#askConfirmation-String-Boolean-">askConfirmation</a></strong>(msg: String; var answer: Boolean);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayLogout">displayLogout</a></strong>();</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayOuterBorder">displayOuterBorder</a></strong>();</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayQuit">displayQuit</a></strong>();</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#displayInnerBorder">displayInnerBorder</a></strong>();</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderOuterBorder">renderOuterBorder</a></strong>();</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#waitForKey">waitForKey</a></strong>();</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderInnerBorder">renderInnerBorder</a></strong>();</code></td>
 </tr>
 <tr class="list2 visibility-published">
-<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderStatsArea">renderStatsArea</a></strong>();</code></td>
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderScreenHeader-String-">renderScreenHeader</a></strong>(heading: String);</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#initialiseScreen">initialiseScreen</a></strong>();</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code>procedure <strong><a href="IHM.html#renderStatsArea-TPhaseSession-LongInt-String-Boolean-">renderStatsArea</a></strong>(phase: <a href="CycleData.html#TPhaseSession">TPhaseSession</a>; session: LongInt; speciesName: String; isPaused: Boolean);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
@@ -115,22 +123,19 @@
 <td class="itemcode"><code><strong><a href="IHM.html#TMainMenuChoice">TMainMenuChoice</a></strong> = (...);</code></td>
 </tr>
 <tr class="list visibility-published">
-<td class="itemcode"><code><strong><a href="IHM.html#TBrowseAction">TBrowseAction</a></strong> = (...);</code></td>
+<td class="itemcode"><code><strong><a href="IHM.html#TTreeChoice">TTreeChoice</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="IHM.html#TSessionAction">TSessionAction</a></strong> = (...);</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#TQuitAnswer">TQuitAnswer</a></strong> = (...);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
 <table class="summary wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><code><strong><a href="IHM.html#BORDER_CHAR">BORDER_CHAR</a></strong> = '*';</code></td>
-</tr>
-<tr class="list2 visibility-published">
-<td class="itemcode"><code><strong><a href="IHM.html#BORDER_WIDTH">BORDER_WIDTH</a></strong> = 121;</code></td>
-</tr>
-<tr class="list visibility-published">
-<td class="itemcode"><code><strong><a href="IHM.html#BORDER_HEIGHT">BORDER_HEIGHT</a></strong> = 35;</code></td>
 </tr>
 <tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="IHM.html#BORDER_TREE_VERTICAL">BORDER_TREE_VERTICAL</a></strong> = 80;</code></td>
@@ -141,6 +146,30 @@
 <tr class="list2 visibility-published">
 <td class="itemcode"><code><strong><a href="IHM.html#BORDER_STATS_HORIZONTAL">BORDER_STATS_HORIZONTAL</a></strong> = 20;</code></td>
 </tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#LOGO_X">LOGO_X</a></strong> = 30;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#LOGO_Y">LOGO_Y</a></strong> = 5;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#HEADING_ROW">HEADING_ROW</a></strong> = 16;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#CONTENT_ROW">CONTENT_ROW</a></strong> = 18;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#MENU_X">MENU_X</a></strong> = 40;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#LIST_X">LIST_X</a></strong> = 30;</code></td>
+</tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#FORM_X">FORM_X</a></strong> = 15;</code></td>
+</tr>
+<tr class="list2 visibility-published">
+<td class="itemcode"><code><strong><a href="IHM.html#DEFAULT_COLOR">DEFAULT_COLOR</a></strong> = crt.White;</code></td>
+</tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Fonctions et procédures</h3>
@@ -149,168 +178,424 @@
 <td class="itemcode"><span id="displayStartMenu-TStartChoice-"></span><code>procedure <strong>displayStartMenu</strong>(var choice: <a href="IHM.html#TStartChoice">TStartChoice</a>);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche le menu de démarrage</p>
+<p>
+ </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>choice</dt>
+<dd>Le choix de l'utilisateur</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="displayMainMenu-TMainMenuChoice-TUser-"></span><code>procedure <strong>displayMainMenu</strong>(var choice: <a href="IHM.html#TMainMenuChoice">TMainMenuChoice</a>; user: <a href="UserData.TUser.html">TUser</a>);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche le menu principal</p>
+<p>
+  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>choice</dt>
+<dd>Le choix de l'utilisateur</dd>
+<dt>user</dt>
+<dd>L'utilisateur connecté</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="displayLogin-String-"></span><code>procedure <strong>displayLogin</strong>(var username: String);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Demande le nom d'utilisateur pour importer le profil</p>
+<p>
+ Le nom saisi est converti automatiquement en minuscules. Si l'utilisateur n'existe pas, un message d'erreur s'affiche et le nom est redemandé, jusqu'à ce qu'il existe ou qu'une entrée vide soit validée. </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>username</dt>
+<dd>Le nom d'utilisateur d'un compte existant, ou une chaîne vide si l'utilisateur a annulé</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="displayRegister-String-String-String-"></span><code>procedure <strong>displayRegister</strong>(var firstname, username, description: String);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Demande les informations d'un nouveau compte</p>
+<p>
+ Il y a des conditions imposées sur les informations. Si l'utilisateur ne les suit pas, des messages d'erreurs s'affichent et l'information est redemandée, jusqu'à ce que les entrées soient validées. Le nom d'utilisateur est converti automatiquement en minuscules.   </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>firstname</dt>
+<dd>Le prénom saisi, peut être vide</dd>
+<dt>username</dt>
+<dd>Le nom d'utilisateur saisi. Si vide, l'inscription est annulée</dd>
+<dt>description</dt>
+<dd>La description saisie, peut être vide</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="displayProfile-TUser-"></span><code>procedure <strong>displayProfile</strong>(user: <a href="UserData.TUser.html">TUser</a>);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche le profil et les statistiques de l'utilisateur</p>
+<p>
+ </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>user</dt>
+<dd>L'utilisateur dont on affiche le profil</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="displayForestOverview-TForest-LongInt-"></span><code>procedure <strong>displayForestOverview</strong>(forest: <a href="UserData.TForest.html">TForest</a>; var idx: LongInt);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche la forêt de l'utilisateur</p>
+<p>
+  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>forst</dt>
+<dd>La forêt de l'utilisateur</dd>
+<dt>idx</dt>
+<dd>Le numéro de l'espèce choisie dans la forêt</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayTreeFull-TTree-"></span><code>procedure <strong>displayTreeFull</strong>(tree: <a href="TreeData.TTree.html">TTree</a>);</code></td>
+<td class="itemcode"><span id="displayTreeFull-TTree-Int64-Boolean-"></span><code>procedure <strong>displayTreeFull</strong>(tree: <a href="TreeData.TTree.html">TTree</a>; deadline: Int64; var timedOut: Boolean);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche un arbre entièrement poussé avec son nom et sa description</p>
+<p>
+   </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>tree</dt>
+<dd>L'arbre à afficher</dd>
+<dt>deadline</dt>
+<dd>La fin de la pause, en ms, ou 0 s'il n'y a pas de limite de temps</dd>
+<dt>timedOut</dt>
+<dd>Vrai si l'attente s'est arrêtée parce que le temps est écoulé. Faux si une touche a été pressée.</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="displayCycleModeMenu-TMode-"></span><code>procedure <strong>displayCycleModeMenu</strong>(var mode: <a href="CycleData.html#TMode">TMode</a>);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche le choix du mode de cycle</p>
+<p>
+ </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>mode</dt>
+<dd>Le mode choisi, ou NONE_MODE si l'utilisateur revient en arrière</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayCustomConfiguration-LongInt-LongInt-LongInt-LongInt-"></span><code>procedure <strong>displayCustomConfiguration</strong>(var focusDuration, shortBreakDuration, longBreakDuration, nbSessionsBeforeLongBreak: LongInt);</code></td>
+<td class="itemcode"><span id="displayCustomConfiguration-LongInt-LongInt-LongInt-LongInt-Boolean-"></span><code>procedure <strong>displayCustomConfiguration</strong>(var focusDuration, shortBreakDuration, longBreakDuration, nbSessionsBeforeLongBreak: LongInt; var confirmed: Boolean);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Demande les paramètres d'un cycle personnalisé puis les fait confirmer</p>
+<p>
+     </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>focusDuration</dt>
+<dd>La durée d'une session de concentration, en minutes</dd>
+<dt>shortBreakDuration</dt>
+<dd>La durée d'une pause courte, en minutes</dd>
+<dt>longBreakDuration</dt>
+<dd>La durée d'une pause longue, en minutes</dd>
+<dt>nbSessionsBeforeLongBreak</dt>
+<dd>Le nombre de sessions de concentration avant une pause longue</dd>
+<dt>confirmed</dt>
+<dd>Vrai si l'utilisateur a confirmé. Faux s'il a annulé et les valeurs renvoyées ne doivent alors pas être utilisées</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayPomodoroConfiguration"></span><code>procedure <strong>displayPomodoroConfiguration</strong>();</code></td>
+<td class="itemcode"><span id="displayPomodoroConfiguration-LongInt-LongInt-LongInt-LongInt-Boolean-"></span><code>procedure <strong>displayPomodoroConfiguration</strong>(focusDuration, shortBreakDuration, longBreakDuration, nbSessionsBeforeLongBreak: LongInt; var confirmed: Boolean);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche les paramètres du mode Pomodoro et demande de les confirmer</p>
+<p>
+     </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>focusDuration</dt>
+<dd>La durée d'une session de concentration, en minutes</dd>
+<dt>shortBreakDuration</dt>
+<dd>La durée d'une pause courte, en minutes</dd>
+<dt>longBreakDuration</dt>
+<dd>La durée d'une pause longue, en minutes</dd>
+<dt>nbSessionsBeforeLongBreak</dt>
+<dd>Le nombre de sessions de concentration avant une pause longue</dd>
+<dt>confirmed</dt>
+<dd>Vrai si l'utilisateur a confirmé. Faux s'il a annulé</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="renderTreePreview-TTree-LongInt-LongInt-"></span><code>procedure <strong>renderTreePreview</strong>(tree: <a href="TreeData.TTree.html">TTree</a>; currentIdx, totalCnt: LongInt);</code></td>
+<td class="itemcode"><span id="displayTreeList-TStringArray-LongInt-Int64-Boolean-"></span><code>procedure <strong>displayTreeList</strong>(species: TStringArray; var choice: LongInt; deadline: Int64; var timedOut: Boolean);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche la liste des espèces disponibles et demande laquelle faire pousser</p>
+<p>
+    </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>species</dt>
+<dd>La liste des noms d'espèces disponibles</dd>
+<dt>choice</dt>
+<dd>Le numéro de l'espèce choisie dans la liste, ou 0 si l'utilisateur revient en arrière ou si le temps est écoulé</dd>
+<dt>deadline</dt>
+<dd>La fin de la pause, en ms, ou 0 s'il n'y a pas de limite de temps</dd>
+<dt>timedOut</dt>
+<dd>Vrai si la saisie s'est arrêtée parce que le temps est écoulé.</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="pollBrowseInput-TBrowseAction-"></span><code>procedure <strong>pollBrowseInput</strong>(var action: <a href="IHM.html#TBrowseAction">TBrowseAction</a>);</code></td>
+<td class="itemcode"><span id="displayTreeChoice-String-TTreeChoice-Int64-Boolean-"></span><code>procedure <strong>displayTreeChoice</strong>(speciesName: String; var action: <a href="IHM.html#TTreeChoice">TTreeChoice</a>; deadline: Int64; var timedOut: Boolean);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche le choix à faire après avoir sélectionné une espèce</p>
+<p>
+    </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>speciesName</dt>
+<dd>Le nom de l'espèce choisie, affiché dans le titre</dd>
+<dt>action</dt>
+<dd>Le choix de l'utilisateur</dd>
+<dt>deadline</dt>
+<dd>La fin de la pause, en ms, ou 0 s'il n'y a pas de limite de temps</dd>
+<dt>timedOut</dt>
+<dd>Vrai si le temps est écoulé avant qu'une touche valide soit pressée</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="renderTreeArea-TTree-LongInt-"></span><code>procedure <strong>renderTreeArea</strong>(tree: <a href="TreeData.TTree.html">TTree</a>; treePhase: LongInt);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Dessine l'arbre dans sa zone dédiée</p>
+<p>
+ L'arbre est dessiné caractère par caractère, chacun avec sa couleur. La couleur par défaut est rétablie ensuite.  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>tree</dt>
+<dd>L'arbre à dessiner</dd>
+<dt>treePhase</dt>
+<dd>Le numéro de la phase de croissance à dessiner</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="renderClockArea-LongInt-"></span><code>procedure <strong>renderClockArea</strong>(time: LongInt);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Dessine l'horloge dans sa zone dédiée</p>
+<p>
+ Le temps est affiché en grands chiffres sous la forme mm:ss. Seule la zone de l'horloge est modifiée. </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>time</dt>
+<dd>Le temps à afficher, en secondes</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
 <td class="itemcode"><span id="renderInstructionsArea-TPhaseSession-"></span><code>procedure <strong>renderInstructionsArea</strong>(sessionPhase: <a href="CycleData.html#TPhaseSession">TPhaseSession</a>);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Dessine la liste des touches disponibles dans sa zone dédiée</p>
+<p>
+ </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>sessionPhase</dt>
+<dd>La phase de la session en cours</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="pollSessionInput-TSessionAction-"></span><code>procedure <strong>pollSessionInput</strong>(var action: <a href="IHM.html#TSessionAction">TSessionAction</a>);</code></td>
+<td class="itemcode"><span id="pollSessionInput-TPhaseSession-TSessionAction-"></span><code>procedure <strong>pollSessionInput</strong>(sessionPhase: <a href="CycleData.html#TPhaseSession">TPhaseSession</a>; var action: <a href="IHM.html#TSessionAction">TSessionAction</a>);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Lit une action de l'utilisateur sur l'écran de session, sans attendre</p>
+<p>
+  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>sessionPhase</dt>
+<dd>La phase de la session en cours</dd>
+<dt>action</dt>
+<dd>L'action demandée</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayCycleEnd-TCycle-Boolean-"></span><code>procedure <strong>displayCycleEnd</strong>(cycle: <a href="CycleData.TCycle.html">TCycle</a>; success: Boolean);</code></td>
+<td class="itemcode"><span id="displayCycleEnd-TCycle-"></span><code>procedure <strong>displayCycleEnd</strong>(cycle: <a href="CycleData.TCycle.html">TCycle</a>);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche le résumé à la fin d'un cycle et attend une touche</p>
+<p>
+ </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>cycle</dt>
+<dd>Le cycle qui vient de se terminer</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayMessage-String-"></span><code>procedure <strong>displayMessage</strong>(msg: String);</code></td>
+<td class="itemcode"><span id="displayQuitConfirmation"></span><code>procedure <strong>displayQuitConfirmation</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche la confirmation pour quitter la session pendant une session de concentration</p>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayError-String-"></span><code>procedure <strong>displayError</strong>(msg: String);</code></td>
+<td class="itemcode"><span id="pollQuitConfirmation-TQuitAnswer-"></span><code>procedure <strong>pollQuitConfirmation</strong>(var answer: <a href="IHM.html#TQuitAnswer">TQuitAnswer</a>);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Lit la réponse à la confirmation pour quitter la session, sans attendre</p>
+<p>
+ </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>answer</dt>
+<dd>La réponse</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="askConfirmation-String-Boolean-"></span><code>procedure <strong>askConfirmation</strong>(msg: String; var answer: Boolean);</code></td>
+<td class="itemcode"><span id="displayLogout"></span><code>procedure <strong>displayLogout</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche l'écran de déconnexion et attend une touche</p>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayOuterBorder"></span><code>procedure <strong>displayOuterBorder</strong>();</code></td>
+<td class="itemcode"><span id="displayQuit"></span><code>procedure <strong>displayQuit</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Affiche l'écran du fin du programme et attend une touche</p>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="displayInnerBorder"></span><code>procedure <strong>displayInnerBorder</strong>();</code></td>
+<td class="itemcode"><span id="renderOuterBorder"></span><code>procedure <strong>renderOuterBorder</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Dessine le cadre autour de tour l'écran</p>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="waitForKey"></span><code>procedure <strong>waitForKey</strong>();</code></td>
+<td class="itemcode"><span id="renderInnerBorder"></span><code>procedure <strong>renderInnerBorder</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Dessine les lignes de séparation de l'écran des session</p>
+</td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="renderStatsArea"></span><code>procedure <strong>renderStatsArea</strong>();</code></td>
+<td class="itemcode"><span id="renderScreenHeader-String-"></span><code>procedure <strong>renderScreenHeader</strong>(heading: String);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Prépare un nouvel écran : éfface tout, puis dessine le logo, le cadre, et un titre</p>
+<p>
+ </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>heading</dt>
+<dd>Le titre à afficher</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="initialiseScreen"></span><code>procedure <strong>initialiseScreen</strong>();</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Prépare le terminal au démarrage du programme</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="renderStatsArea-TPhaseSession-LongInt-String-Boolean-"></span><code>procedure <strong>renderStatsArea</strong>(phase: <a href="CycleData.html#TPhaseSession">TPhaseSession</a>; session: LongInt; speciesName: String; isPaused: Boolean);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Affiche les informations de la session dans sa zone dédiée</p>
+<p>
+    </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>phase</dt>
+<dd>La phase de la session en cours</dd>
+<dt>session</dt>
+<dd>Le numéro de la session de concentration en cours</dd>
+<dt>speciesName</dt>
+<dd>Le nom de l'espèce de l'arbre</dd>
+<dt>isPaused</dt>
+<dd>Vrai si le minuteur est en pause. Faux sinon</dd>
+</dl>
+</td></tr>
 </table>
 <h3 class="detail">Types</h3>
 <table class="detail visibility-published wide_list">
@@ -318,16 +603,18 @@
 <td class="itemcode"><span id="TStartChoice"></span><code><strong>TStartChoice</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Valeurs</h6>
+<p>
+Le choix de l'utilisateur dans le menu de démarrage.</p>
+<h6 class="description_section">Valeurs</h6>
 <ul>
 <li>
-<span id="IMPORT">IMPORT</span></li>
+<span id="IMPORT">IMPORT</span>: Importer un profil existant.</li>
 <li>
-<span id="REGISTER">REGISTER</span></li>
+<span id="REGISTER">REGISTER</span>: Créer un nouveau profil.</li>
 <li>
-<span id="QUIT_START">QUIT_START</span></li>
+<span id="QUIT_START">QUIT_START</span>: Quitter le programme.</li>
 <li>
-<span id="NONE_START">NONE_START</span></li>
+<span id="NONE_START">NONE_START</span>: Aucun choix.</li>
 </ul>
 </td></tr>
 </table>
@@ -336,38 +623,42 @@
 <td class="itemcode"><span id="TMainMenuChoice"></span><code><strong>TMainMenuChoice</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Valeurs</h6>
+<p>
+Le choix de l'utilisateur dans le menu principal.</p>
+<h6 class="description_section">Valeurs</h6>
 <ul>
 <li>
-<span id="VIEW_PROFILE">VIEW_PROFILE</span></li>
+<span id="VIEW_PROFILE">VIEW_PROFILE</span>: Voir le profil et les statistiques.</li>
 <li>
-<span id="VIEW_FOREST">VIEW_FOREST</span></li>
+<span id="VIEW_FOREST">VIEW_FOREST</span>: Voir la forêt.</li>
 <li>
-<span id="LOGOUT">LOGOUT</span></li>
+<span id="LOGOUT">LOGOUT</span>: Se déconnecter et revenir au menu de démarrage.</li>
 <li>
-<span id="START">START</span></li>
+<span id="START">START</span>: Démarrer une session de travail.</li>
 <li>
-<span id="QUIT_MAINMENU">QUIT_MAINMENU</span></li>
+<span id="QUIT_MAINMENU">QUIT_MAINMENU</span>: Quitter le programme.</li>
 <li>
-<span id="NONE_MAINMENU">NONE_MAINMENU</span></li>
+<span id="NONE_MAINMENU">NONE_MAINMENU</span>: Aucun choix.</li>
 </ul>
 </td></tr>
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="TBrowseAction"></span><code><strong>TBrowseAction</strong> = (...);</code></td>
+<td class="itemcode"><span id="TTreeChoice"></span><code><strong>TTreeChoice</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Valeurs</h6>
+<p>
+Le choix de l'utilisateur après avoir sélectionné une espèce d'arbre</p>
+<h6 class="description_section">Valeurs</h6>
 <ul>
 <li>
-<span id="ACTION_NONE">ACTION_NONE</span></li>
+<span id="CONFIRM_TREE">CONFIRM_TREE</span>: Utiliser cet arbre.</li>
 <li>
-<span id="NEXT">NEXT</span></li>
+<span id="PREVIEW_TREE">PREVIEW_TREE</span>: Voir un aperçu de l'arbre entièrement poussé.</li>
 <li>
-<span id="PREVIOUS">PREVIOUS</span></li>
+<span id="CANCEL_TREE">CANCEL_TREE</span>: Revenir à la liste des espèces ou revenir à l'écran de session quand le temps de la pause est écoulé.</li>
 <li>
-<span id="SELECT">SELECT</span></li>
+<span id="NONE_TREECHOICE">NONE_TREECHOICE</span>: Aucun choix.</li>
 </ul>
 </td></tr>
 </table>
@@ -376,16 +667,38 @@
 <td class="itemcode"><span id="TSessionAction"></span><code><strong>TSessionAction</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p><h6 class="description_section">Valeurs</h6>
+<p>
+Une action de l'utilisateur sur l'écran de session</p>
+<h6 class="description_section">Valeurs</h6>
 <ul>
 <li>
-<span id="SESSION_ACTION_NONE">SESSION_ACTION_NONE</span></li>
+<span id="TOGGLE_PAUSE">TOGGLE_PAUSE</span>: Mettre en pause ou reprendre le minuteur.</li>
 <li>
-<span id="TOGGLE_PAUSE">TOGGLE_PAUSE</span></li>
+<span id="QUIT_SESSION">QUIT_SESSION</span>: Quitter la session.</li>
 <li>
-<span id="QUIT_SESSION">QUIT_SESSION</span></li>
+<span id="CHANGE_TREE">CHANGE_TREE</span>: Changer d'arbre (uniquement pendant une pause).</li>
 <li>
-<span id="CHANGE_TREE">CHANGE_TREE</span></li>
+<span id="SKIP_PHASE">SKIP_PHASE</span>: Passer à la session suivante (uniquement pendant une pause).</li>
+<li>
+<span id="NONE_SESSIONACTION">NONE_SESSIONACTION</span>: Aucune action.</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="TQuitAnswer"></span><code><strong>TQuitAnswer</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+La réponse de l'utilisateur à la confirmation pour quitter la session.</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="QUIT_YES">QUIT_YES</span>: Quitter. L'arbre en cours meurt.</li>
+<li>
+<span id="QUIT_NO">QUIT_NO</span>: Continuer la session.</li>
+<li>
+<span id="QUIT_PENDING">QUIT_PENDING</span>: Pas encore de réponse.</li>
 </ul>
 </td></tr>
 </table>
@@ -399,25 +712,11 @@
 </table>
 <table class="detail visibility-published wide_list">
 <tr class="list visibility-published">
-<td class="itemcode"><span id="BORDER_WIDTH"></span><code><strong>BORDER_WIDTH</strong> = 121;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail visibility-published wide_list">
-<tr class="list visibility-published">
-<td class="itemcode"><span id="BORDER_HEIGHT"></span><code><strong>BORDER_HEIGHT</strong> = 35;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail visibility-published wide_list">
-<tr class="list visibility-published">
 <td class="itemcode"><span id="BORDER_TREE_VERTICAL"></span><code><strong>BORDER_TREE_VERTICAL</strong> = 80;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-dimension w/o border is 118x33, w/ border is 120x35</p>
+Caractère avec lequel le cadre est tracé</p>
 </td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -426,7 +725,7 @@ dimension w/o border is 118x33, w/ border is 120x35</p>
 </tr>
 <tr><td colspan="1">
 <p>
-dimension of tree w/ border is 80x35, w/o border is 78x33</p>
+Colonne de la ligne qui sépare l'arbre (à gauche) du panneau à droite</p>
 </td></tr>
 </table>
 <table class="detail visibility-published wide_list">
@@ -435,7 +734,79 @@ dimension of tree w/ border is 80x35, w/o border is 78x33</p>
 </tr>
 <tr><td colspan="1">
 <p>
-dimension of clock area w/ border is 40x20, w/o border is 38x18</p>
+Ligne qui sépare l'horloge des informations de la session</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="LOGO_X"></span><code><strong>LOGO_X</strong> = 30;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ligne qui sépare les informations de la session des instructions</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="LOGO_Y"></span><code><strong>LOGO_Y</strong> = 5;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Colonne du coin supérieur gauche du logo</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="HEADING_ROW"></span><code><strong>HEADING_ROW</strong> = 16;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ligne du coin supérieur gauche du logo</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="CONTENT_ROW"></span><code><strong>CONTENT_ROW</strong> = 18;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ligne du titre centré, sous le logo</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="MENU_X"></span><code><strong>MENU_X</strong> = 40;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Première ligne du contenu d'un écran, sous le titre</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="LIST_X"></span><code><strong>LIST_X</strong> = 30;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Colonne de gauche des menus et des choix</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="FORM_X"></span><code><strong>FORM_X</strong> = 15;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Colonne de gauche des listes, de la connexion et du profil</p>
+</td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="DEFAULT_COLOR"></span><code><strong>DEFAULT_COLOR</strong> = crt.White;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Colonne de gauche du formulaire d'inscription</p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Produit par <a href="https://pasdoc.github.io/">PasDoc 1.0.4</a>. </em>
