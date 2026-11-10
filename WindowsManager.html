@@ -31,7 +31,7 @@
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p>
-Cette unité fixe la taille de la fenêtre du terminal Windows au démarrage du programme, empêche l'utilisateur de la redimensionner et empêche le défilement (scroll) dans le terminal. Elle ne dépend d'aucune autre unité du programme et ne fonctionne que sous Windows (sous un autre système, elle ne fait rien).</p>
+Cette unité fixe la taille de la fenêtre du terminal Windows au démarrage du programme, empêche l'utilisateur de la redimensionner et empêche le défilement (scroll) dans le terminal. Elle ne fonctionne que sous Windows. Sous un autre système, elle ne fait rien.</p>
 <span id="PasDoc-Uses"></span><h2 class="overview">Aperçu</h2>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
@@ -49,7 +49,7 @@ Cette unité fixe la taille de la fenêtre du terminal Windows au démarrage du 
 <p>
 Fixe la taille de la fenêtre du terminal</p>
 <p>
- La taille du tampon est égale à la taille de la fenêtre : il n'y a rien au-delà de l'écran visible, donc le défilement est impossible. Le redimensionnement et l'agrandissement de la fenêtre sont bloqués, et la sélection à la souris est désactivée (elle mettrait le programme en pause). Pour qu'écrire dans la dernière case du cadre ne fasse pas défiler l'écran, la taille donnée doit être un peu plus grande que celle du cadre. À appeler une seule fois, au début du programme et avant tout affichage.  </p>
+  </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>width</dt>
