@@ -71,6 +71,9 @@ Cette unité regroupe les procédures et fonctions utilitaires du programme.</p>
 <tr class="list2 visibility-published">
 <td class="itemcode"><code>function <strong><a href="Utilities.html#currentTick">currentTick</a></strong>(): Int64;</code></td>
 </tr>
+<tr class="list visibility-published">
+<td class="itemcode"><code>function <strong><a href="Utilities.html#deadlineIn-LongInt-">deadlineIn</a></strong>(seconds: LongInt): Int64;</code></td>
+</tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
 <table class="summary wide_list">
@@ -174,7 +177,7 @@ Vérifie qu'un prénom est valide</p>
 <p>
 Calcule la phase de croissance d'un arbre selon te temps écoulé</p>
 <p>
-    </p>
+ Les phases 1 à nbPhases - 1 se succèdent à intervalles réguliers (croissance linéaire) pendant la session, sauf pendant ses 5 dernières secondes. La dernière phase (nbPhases) n'est affichée que pendant ces 5 dernières secondes, jusqu'à la fin de la session.    </p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>nbPhases</dt>
@@ -217,7 +220,7 @@ Attend une touche, avec une limite de temps éventuelle</p>
 <h6 class="description_section">Paramètres</h6>
 <dl class="parameters">
 <dt>deadline</dt>
-<dd>La fin de l'attente, en ms, ou 0 s'il n'y a pas de limite de temps</dd>
+<dd>La fin de l'attente, en millisecondes, ou 0 s'il n'y a pas de limite de temps</dd>
 <dt>countdownRow</dt>
 <dd>La ligne de la fenêtre courante où le temps restant est affiché</dd>
 <dt>key</dt>
@@ -244,7 +247,7 @@ Lit un nombre entier compris dans un intervalle, avec une limite de temps évent
 <dt>maxValue</dt>
 <dd>La plus grande valeur acceptée</dd>
 <dt>deadline</dt>
-<dd>La fin de la saisie, en ms, ou 0 s'il n'y a pas de limite de temps</dd>
+<dd>La fin de la saisie, en millisecondes, ou 0 s'il n'y a pas de limite de temps</dd>
 <dt>countdownRow</dt>
 <dd>La ligne de la fenêtre courante où le temps restant est affiché</dd>
 <dt>timedOut</dt>
@@ -313,11 +316,28 @@ Remet l'affichage sur tout le cadre</p>
 </tr>
 <tr><td colspan="1">
 <p>
-Donne l'instant actuel en ms</p>
+Donne l'instant actuel en millisecondes</p>
 <p>
  Le nombre est celui de GetTickCount64. Il ne sert qu'à mesurer des durées en faisant la différence de deux appels. </p>
 <h6 class="description_section">Retourne</h6>
-<p class="return">Le nombre de ms écoulées depuis le démarrage de Windows</p></td></tr>
+<p class="return">Le nombre de millisecondes écoulées depuis le démarrage de Windows</p></td></tr>
+</table>
+<table class="detail visibility-published wide_list">
+<tr class="list visibility-published">
+<td class="itemcode"><span id="deadlineIn-LongInt-"></span><code>function <strong>deadlineIn</strong>(seconds: LongInt): Int64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcule l'instant d'une échéance située dans un certain nombre de secondes</p>
+<p>
+  </p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt>seconds</dt>
+<dd>Le nombre de secondes avant l'échéance</dd>
+</dl>
+<h6 class="description_section">Retourne</h6>
+<p class="return">L'instant de l'échéance, en millisecondes</p></td></tr>
 </table>
 <h3 class="detail">Constantes</h3>
 <table class="detail visibility-published wide_list">
